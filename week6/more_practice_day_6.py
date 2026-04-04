@@ -48,7 +48,21 @@ for user in users:
 
 
 #question 4
+users = [
+    {"username": "andrew", "age": 26},
+    {"username": "anna", "age": 24},
+    {"username": "mike", "age": 30},
+    {"username": "sarah", "age": 19},
+    {"username": "john", "age": 40},
+]
 
+total = 0
+
+for user in users:
+    if user["age"] % 2 == 0:
+        total = total + user
+
+print(total)
 
 #this is wrong
 
