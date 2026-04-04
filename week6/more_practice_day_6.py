@@ -1,4 +1,16 @@
 #question 1
+users = [
+    {"username": "andrew", "age": 26},
+    {"username": "anna", "age": 24},
+    {"username": "mike", "age": 30},
+    {"username": "sarah", "age": 19},
+    {"username": "john", "age": 40},
+]
+
+
+
+for user in users:
+    print(user["username"])
 
 
 
