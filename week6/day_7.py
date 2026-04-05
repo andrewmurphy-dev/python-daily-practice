@@ -19,20 +19,7 @@ for user in users:
 
 
 
-users = [
-    {"username": "andrew", "age": 26, "country": "Ireland"},
-    {"username": "anna", "age": 24, "country": "Germany"},
-    {"username": "mike", "age": 30, "country": "USA"},
-    {"username": "sarah", "age": 19, "country": "Ireland"},
-    {"username": "leo", "age": 27, "country": "France"}
-]
 
-ages = []
-
-
-for user in users:
-    ages.append(user["age"])
-print(ages)
 
 
 
