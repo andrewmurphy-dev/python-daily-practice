@@ -64,39 +64,9 @@ users = [
 ]
 
 
-
-for key, value in users.items():
-    user["age"] + 1
-    print(user)
-
-
-for key, value in users.items():
-
-#this is invalid , this is a dictionary method
-
-user["age"] + 1
-##this calculates the value but does not store it
-
-
-
-
-#lets try again
-
 for user in users:
-
-    #above is loop through the list !
-    user["age"] = user["age"] + 1 #
-    #see this is where i get confused , the access key !
-    #i want to access age ! so hpw do i do that ?
-    #i assume its value["age"]
-    #there is no variable called value , there is a variable called user
-
-    #WE PRINT USERS HERE !
-
-    #WHY ?
-    #we are not making a new list
-
-
+    user["age"] = user["age"] + 1 
+print(users)
 #question 5
 
 
