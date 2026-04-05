@@ -72,3 +72,20 @@ print(users)
 
 
 #question 5
+
+users = [
+    {"username": "andrew", "age": 26, "country": "Ireland"},
+    {"username": "anna", "age": 24, "country": "Germany"},
+    {"username": "mike", "age": 30, "country": "USA"},
+    {"username": "sarah", "age": 19, "country": "Ireland"},
+    {"username": "leo", "age": 27, "country": "France"}
+]
+
+
+countries = []
+
+for user in users:
+    countries.append(user["country"])
+
+print(countries)
+
