@@ -32,20 +32,6 @@ print(count)
 
 
 
-cities = ["tokyo", "osaka", "kyoto", "nagoya"]
-position = cities.index("kyoto")
-print(position)
-
-#or we can do this
-
-cities = ["tokyo", "osaka", "kyoto", "nagoya"]
-
-print(cities.index("nagoya"))
-
-#this is temp storage
-
-
-
 
 
 #question 5
