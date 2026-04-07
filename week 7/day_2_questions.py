@@ -29,16 +29,6 @@ print(count)
 
 
 #question 4
-#find the index potion
-
-cities = ["tokyo", "osaka", "kyoto", "nagoya"]
-
-cities.index("kyoto")
-print(cities)
-
-
-#we have to store the value !
-#correction
 
 
 
