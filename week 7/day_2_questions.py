@@ -29,7 +29,9 @@ print(count)
 
 
 #question 4
-
+cities = ["tokyo", "osaka", "kyoto", "nagoya"]
+position = cities.index("kyoto")
+print(position)
 
 
 
