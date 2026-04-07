@@ -1,10 +1,6 @@
 #question 1
 
 
-users = ["anna", "mike", "leo"]
-
-users.append("sarah")
-print(users)
 
 
 
