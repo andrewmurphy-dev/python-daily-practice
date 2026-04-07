@@ -20,14 +20,6 @@ print(numbers)
 #question 3
 
 
-fruits = ["apple", "banana", "apple", "orange", "apple"]
-
-count = 0
-for i in fruits:
-    if i == "apple":
-        count = count + 1
-print(count)
-
 
 
 #question 4
