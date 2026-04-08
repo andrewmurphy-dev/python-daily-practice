@@ -13,6 +13,13 @@ if "mike" in users:
 
 #question 2
 #list memborship (egative)
+users = ["anna", "mike", "leo"]
+
+name = input("enter username: ")
+
+if name not in users:
+    print("user not found")
+
 
 
 #question 3
