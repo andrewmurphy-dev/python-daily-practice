@@ -42,7 +42,19 @@ if name in contacts:
 
 #question 4
 #dictionary memborship
+contacts = {
+    "andrew": "andrew@gmail.com",
+    "anna": "anna@gmail.com"
+}
 
+
+
+username = input("enter a username: ")
+
+if username in contacts:
+    print("found")
+else:
+    print("not found ")
 
 
 
