@@ -3,14 +3,6 @@
 #list memborship
 
 
-users = ["anna", "mike", "leo"]
-
-
-
-if "mike" in users:
-    print("user exits")
-
-
 #question 2
 #list memborship (egative)
 
