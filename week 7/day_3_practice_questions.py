@@ -43,17 +43,7 @@ else:
 
 #question 5
 
-sentence_create = input("enter your sentence here: ")
 
-sentence_created = sentence_create.split()
-print(sentence_created)
-
-count = 0
-
-for word in sentence_created:
-    count = count + 1
-
-print(count)
 
 
 
