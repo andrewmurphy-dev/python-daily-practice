@@ -1,5 +1,9 @@
 #just practice questions !
 
+#question 1 
+user = input("Enter your name: ")
+
+print(user.lower())
 
 
 
