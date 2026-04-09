@@ -1,9 +1,7 @@
 #just practice questions !
 
 
-user = input("Enter your name: ")
 
-print(user.lower())
 
 #above is temporary storage
 
