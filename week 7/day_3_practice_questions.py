@@ -46,7 +46,6 @@ print(change_text)
 
 
 
-
 #question 5
 sentence_create = input("enter your sentence here: ")
 
@@ -64,18 +63,10 @@ print(count)
 
 
 #question 6
-
-
-#ask user for a sentence
-
 user_ask_1 = input("enter your sentence here: ")
-
-#converts the sentence to lower case
 
 lower_case = user_ask_1.lower()
 
-
-#splits the ssentence into words
 words_lower = lower_case.split()
 print(words_lower)
 
