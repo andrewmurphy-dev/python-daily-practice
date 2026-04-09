@@ -26,15 +26,6 @@ print(sentence)
 
 #question 3
 
-email_make = input("enter your email address: ")
-
-email_made = email_make.split()
-print(email_made)
-
-if "@" in email_made:
-    print("Email address is valid")
-else:
-    print("Email address is invalid")
 
 
 #question 4
