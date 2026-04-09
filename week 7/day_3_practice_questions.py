@@ -16,7 +16,12 @@ print(user_name)
 
 #question 2
 
+make_sentence = input("make a sentence: ")
 
+sentence = make_sentence.split()
+print(sentence)
+
+['hello', 'nice', 'to', 'meet', 'you', 'my', 'name', 'is', 'andrew']
 
 
 #question 3
