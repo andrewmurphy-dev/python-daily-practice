@@ -37,12 +37,7 @@ else:
     print("Email address is invalid")
 
 #question 4
-text_make = input("make a sentence containing the word python: ")
 
-
-change_text = text_make.replace("python", "coding")
-
-print(change_text)
 
 
 
