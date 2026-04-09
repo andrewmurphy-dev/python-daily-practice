@@ -1,11 +1,9 @@
 #just practice questions !
 
-#question 1 
+
 user = input("Enter your name: ")
 
 print(user.lower())
-
-
 
 #above is temporary storage
 
@@ -36,6 +34,7 @@ if "@" in email_made:
 else:
     print("Email address is invalid")
 
+
 #question 4
 text_make = input("make a sentence containing the word python: ")
 
@@ -47,6 +46,7 @@ print(change_text)
 
 
 #question 5
+
 sentence_create = input("enter your sentence here: ")
 
 sentence_created = sentence_create.split()
@@ -61,12 +61,19 @@ print(count)
 
 
 
-
 #question 6
+
+
+#ask user for a sentence
+
 user_ask_1 = input("enter your sentence here: ")
+
+#converts the sentence to lower case
 
 lower_case = user_ask_1.lower()
 
+
+#splits the ssentence into words
 words_lower = lower_case.split()
 print(words_lower)
 
