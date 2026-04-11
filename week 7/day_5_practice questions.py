@@ -32,32 +32,6 @@ print(count_email)
 #question 3
 #detect duplicate words
 
-
-sentence = input("enter a sentence: ").lower().split()
-
-#how can i find a duplicate
-
-#we need two tracking variables
-
-
-previous = sentence[0]
-count_words = 0
-
-
-for present in sentence:
-    if present == previous:
-        count_words = count_words + 1
-        print(count_words - 1, "duplicates found")
-        break
-else:
-    print("no duplicates")
-
-
-#the correct version
-
-#i needed to add a seen tracker
-#also the question specficially asked does a duplicate exist , again read the question
-
 seen = []
 sentence = input("enter a sentence: ").lower().split()
 
