@@ -37,7 +37,11 @@ for username, email in contacts.items():
 
 #question 4
 #gmail counter
-
+gmail_count = 0
+for username, email in contacts.items():
+    if "gmail" in email:
+        gmail_count += 1
+print(gmail_count)
 
 
 
