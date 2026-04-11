@@ -13,20 +13,7 @@ else:
 #question 2
 #email domain counter
 
-employees = {
-    "andrew": "andrew@gmail.com",
-    "anna": "anna@company.com",
-    "mike": "mike@gmail.com",
-    "alex": "alex@company.com"
-}
 
-count_email = 0
-
-for user, email in employees:
-    if "gmail" in email:
-        count_email = count_email + 1
-
-print(count_email)
 
 
 #question 3
