@@ -31,6 +31,16 @@ print(count_email)
 
 #question 3
 #detect duplicate words
+seen = []
+sentence = input("enter a sentence: ").lower().split()
+
+for user in sentence:
+    if user in seen:
+        print("duplicate found!")
+        break
+    seen.append(user)
+else:
+    print("no duplication found")
 
 
 
