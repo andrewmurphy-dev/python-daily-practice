@@ -23,17 +23,6 @@ print(phone)
 #question 3
 #gmail filter
 
-contacts = {
-    "andrew": "andrew@gmail.com",
-    "anna": "anna@yahoo.com",
-    "mike": "mike@gmail.com"
-}
-
-
-for username, email in contacts.items():
-    if "gmail" in email:
-        print(username)
-
 
 #question 4
 #gmail counter
