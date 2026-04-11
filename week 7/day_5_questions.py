@@ -1,5 +1,8 @@
 #question 1
 
+username = input("Enter your username: ").strip().lower()
+
+print(username)
 
 
 
