@@ -1,5 +1,11 @@
 #question 1
+products = ["apple juice", "orange juice", "milk", "bread"]
+product_name = input("enter product name: ").strip().lower()
 
+if product_name in products:
+    print("product available")
+else:
+    print("product not found")
 
 
 
