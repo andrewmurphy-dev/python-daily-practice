@@ -8,7 +8,15 @@ print(username)
 
 #question 2
 #safe contact search
+contacts = {
+    "andrew": "123",
+    "anna": "456"
+}
 
+username_ask = input("Enter your username: ").strip().lower()
+
+phone = contacts.get(username_ask, "contact not found")
+print(phone)
 
 
 
