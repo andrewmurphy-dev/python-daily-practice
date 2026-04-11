@@ -71,9 +71,4 @@ print(count)
 #question 6
 #username validation
 
-username = input("enter a username: ")
 
-if " " not in username and username == username.lower():
-    print("valid username")
-else:
-    print("invalid username")
