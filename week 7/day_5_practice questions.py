@@ -45,15 +45,6 @@ else:
 
 
 #question 4
-sentence = input("enter a sentence: ").split()
-
-longest_word = sentence[0]
-
-for word in sentence:
-    if len(word) > len(longest_word):
-        longest_word = word
-
-print(longest_word)
 
 
 
