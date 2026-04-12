@@ -30,6 +30,17 @@ for user in contacts.items():
 
 #question 4
 #safe search
+contacts = {
+    "andrew": "123",
+    "anna": "456",
+    "mike": "789"
+}
+
+ask_username = input("What is your name?: ")
+
+if ask_username in contacts:
+    print(contacts.get(ask_username, "contact not found"))
+
 
 
 #this is a 8/10
