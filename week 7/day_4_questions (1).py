@@ -3,14 +3,7 @@
 #question 1
 #print the usernames
 
-contacts = {
-    "andrew": "123",
-    "anna": "456",
-    "mike": "789"
-}
 
-for user in contacts.keys():
-    print(user)
 
 
 #question 2
