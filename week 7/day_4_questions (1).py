@@ -24,8 +24,7 @@ for value in contacts.values():
 #question 3
 #print both names and phone numbers
 
-for user in contacts.items():
-    print(user)
+
 
 
 #question 4
