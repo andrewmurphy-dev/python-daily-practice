@@ -23,20 +23,7 @@ for word, value in dict.items():
 
 #most common username
 
-sentence = input("enter a sentence: ").lower().split()
 
-common = {}
-
-for word in sentence:
-    if word in common:
-        common[word] += 1
-
-    else:
-        common[word] = 1
-
-
-largest = 0
-largest_value = ""
 
 
 for word, value in common.items():
