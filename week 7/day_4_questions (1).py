@@ -15,6 +15,8 @@ for user in contacts.keys():
 
 #question 2
 #print the phone numbers
+for value in contacts.values():
+    print(value)
 
 
 
