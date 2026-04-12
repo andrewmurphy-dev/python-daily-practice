@@ -48,6 +48,13 @@ print(largest_value, largest)
 
 #exercise 3
 
+sentence_email = input("enter your email: ").lower().split()
+
+
+for email in sentence_email:
+    if "gmail" in email:
+        print(email)
+
 
 
 #longest word
