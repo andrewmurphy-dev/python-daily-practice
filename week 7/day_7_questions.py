@@ -63,6 +63,15 @@ for email in sentence_email:
 sentence = input("enter a long sentence: ").lower().split()
 
 #print the longest word
+largest = len(sentence[0])
+largest_name = ""
+
+for word in sentence:
+    if len(word) > largest:
+        largest = len(word)
+        largest_name = word
+
+print(largest_name, largest)
 
 
 #8/10
