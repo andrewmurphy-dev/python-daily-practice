@@ -79,24 +79,7 @@ print(largest_name, largest)
 #question 5
 
 
-sentence = input("enter a long sentence: ").lower().split()
 
-#print how many inique words exist
-
-
-unique = {}
-
-
-for word in sentence:
-    if word in unique:
-        unique[word] += 1
-    else:
-        unique[word] = 1
-
-
-for word, value in unique.items():
-    if value == 1:
-        print(word)
 
 #question 6
 
