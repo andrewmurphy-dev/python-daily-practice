@@ -100,18 +100,3 @@ for word, value in unique.items():
 
 #question 6
 
-inventory = {
-    "apple": 10,
-    "banana": 5,
-    "orange": 8
-}
-
-
-product_name = input("enter a product name: ").lower()
-
-
-if product_name in inventory.keys():
-    print("stock:", inventory[product_name])
-else:
-    print("product not found")
-
