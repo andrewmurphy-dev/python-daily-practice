@@ -2,6 +2,19 @@
 
 #username counter
 #question 1
+username = input("enter a sentence: ").lower().split()
+
+dict = {}
+
+for word in username:
+    if word in dict:
+        dict[word] += 1
+    else:
+        dict[word] = 1
+
+
+for word, value in dict.items():
+    print(word, value)
 
 
 
