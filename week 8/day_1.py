@@ -47,6 +47,14 @@ print("Q1:", count - 1)
 # Goal: Print the first number that is different from the start.
 # ============================================================
 
+numbers = [5, 5, 5, 7, 7]
+previous = numbers[0]
+
+for i in numbers:
+    if i != previous:
+        print("Q3:", i)
+        break
+    previous = i
 
 
 # ============================================================
