@@ -63,16 +63,7 @@ for i in numbers:
 # Goal: Count how many times value changes left to right.
 # ============================================================
 
-numbers = [1, 1, 2, 2, 3]
-count = 0
-previous = numbers[0]
 
-for i in numbers:
-    if i != previous:
-        count += 1
-    previous = i
-
-print("Q4:", count)
 
 
 # ============================================================
