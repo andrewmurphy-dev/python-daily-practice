@@ -80,7 +80,16 @@ print("Q4:", count)
 # List: [4, 4, 4, 5]
 # ============================================================
 
+numbers = [4, 4, 4, 5]
+count = 0
+previous = numbers[0]
 
+for i in numbers:
+    if i == previous:
+        count += 1
+    previous = i
+
+print("Q5:", count - 1)
 
 
 # ============================================================
