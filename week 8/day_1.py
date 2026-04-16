@@ -16,6 +16,17 @@ print("Day 1 practice loaded.")
 # Goal: Count how many times current value equals previous value.
 # ============================================================
 
+numbers = [1, 1, 2, 2, 3]
+count = 0
+previous = numbers[0]
+
+for i in numbers:
+    if i == previous:
+        count += 1
+    previous = i
+
+print("Q1:", count - 1)
+
 
 # ============================================================
 # Question 2: Explain loop order (in comments)
