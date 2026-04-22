@@ -1,0 +1,92 @@
+# ============================================================
+#  .get() PRACTICE QUESTIONS
+# ============================================================
+# For each question, predict the output BEFORE running it.
+# Then run the code to check yourself!
+# ============================================================
+
+student = {
+    "name": "Andrew",
+    "grade": "A",
+    "age": 20,
+    "subject": "Python"
+}
+
+# ---- QUESTION 1 ----
+# What does this print?
+print(student.get("name"))
+andrew 
+# ---- QUESTION 2 ----
+# What does this print? (key does NOT exist)
+print(student.get("school"))
+#none
+
+# ---- QUESTION 3 ----
+# What does this print? (key doesn't exist, but we give a default)
+print(student.get("school", "No school found"))
+#no school found
+
+# ---- QUESTION 4 ----
+# What does this print?
+print(student.get("grade", "No grade"))
+#A
+
+# ---- QUESTION 5 ----
+# What does this print?
+print(student.get("age", 0))
+#20
+
+# ---- QUESTION 6 ----
+# What does this print? (careful!)
+print(student.get("AGE"))
+#none
+
+# ---- QUESTION 7 ----
+# What does this print?
+result = student.get("subject", "unknown")
+print(f"The subject is: {result}")
+#the subject is python 
+
+# ---- QUESTION 8 ----
+
+# What does this print?
+result = student.get("teacher", "unknown")
+print(f"The teacher is: {result}")
+#the teacher is unknown 
+
+# ---- QUESTION 9 ----
+# Will this crash? What does it print?
+value = student.get("missing_key")
+if value is None:
+    print("Key was not found!")
+else:
+    print(value)
+#this will not crash , , it will print key was not found!
+
+# ---- QUESTION 10 ----
+# CHALLENGE: Use .get() to safely print the student's "gpa"
+# If it doesn't exist, print "GPA not available"
+# Write your answer below:
+
+# YOUR CODE HERE
+
+result = student.get("gpa", "GPA not available"
+
+if resukt is None:
+    print("GPA not available")
+else:
+    print(result)
+
+
+
+
+    
+
+#there is a structure to get() 
+
+dictionary.get(key, default) #if the key is not found, the default value will be returned
+
+#key — what you're looking for (required)
+#default — what to return if the key doesn't exist (optional)
+
+#get() will never crash, it will return None if the key is not found
