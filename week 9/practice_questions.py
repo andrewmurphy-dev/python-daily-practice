@@ -58,6 +58,8 @@ for key in students.keys():
 # John
 # Lea
 
+for value in students.values():
+    print(value["name"])
 
 
 #the value name is misleading ! 
