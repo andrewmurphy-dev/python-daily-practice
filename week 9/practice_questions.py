@@ -21,7 +21,7 @@ students = {
 # Expected output: Andre
 
 
-
+print(students["student1"]["name"])
 
 
 # Q2. Print the AGE of student3.
