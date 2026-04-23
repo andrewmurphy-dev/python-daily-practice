@@ -20,7 +20,7 @@ students = {
 # Q1. Print the NAME of student1.
 # Expected output: Andre
 
-print(students["student1"]["name"])
+
 
 
 
