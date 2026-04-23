@@ -26,7 +26,6 @@ print(students["student1"]["name"])
 
 # Q2. Print the AGE of student3.
 # Expected output: 19
-print(students["student3"]["age"])
 
 
 
