@@ -47,6 +47,8 @@ print(students["student4"]["grade"])
 # student2
 # student3
 # student4
+for key in students.keys():
+    print(key)
 
 
 # Q5. Loop through the students and print ONLY their names.
