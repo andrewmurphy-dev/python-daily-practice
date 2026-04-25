@@ -33,10 +33,6 @@ for row in range(4):
 #per line row 
 
 #question 4 
-for row in range(1):
-    for col in range(5):
-        print("B", end=" ")
-    print()
 
 #1 row 
 #4 columns 
