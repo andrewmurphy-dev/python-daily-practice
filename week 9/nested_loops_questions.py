@@ -45,9 +45,7 @@ for row in range(1):
 
 
 #question 5 
-for row in range(2):
-    for col in range(2):
-        print(row, col) #this makes a new line auto maticaly ! 
+
 
 
 #the column must finish until we loop to the next row !
