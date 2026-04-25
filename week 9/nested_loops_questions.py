@@ -23,11 +23,6 @@ for row in range(3):
 
 #question 3 
 
-for row in range(4):
-    for col in range(1):
-        print("A", end=" ")
-    print()
-
 # 3 rows 
 # 1 column 
 #per line row 
