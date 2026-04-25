@@ -11,10 +11,7 @@ for row in range(2):
 
 
 #question 2 
-for row in range(3):
-    for col in range(2):
-        print("#", end=" ")
-    print()
+
 
 #3 rows 
 # per row has 2 columns 
