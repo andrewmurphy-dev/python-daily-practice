@@ -38,15 +38,7 @@ print(users["u3"]["name"])
 
 
 #question 3 
-users = {
-    "u1": {"name": "Ana", "role": "admin"},
-    "u2": {"name": "Ben", "role": "guest"},
-    "u3": {"name": "Cara", "role": "admin"},
-}
 
-
-for user_id, values in users.items():
-    print(user_id, users[user_id]["name"])
 
 
 #question 4 
