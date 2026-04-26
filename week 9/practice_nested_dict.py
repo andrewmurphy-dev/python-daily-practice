@@ -25,15 +25,7 @@ school = {
 print(school["classB"]["room"])
 
 #question 2
-users = {
-    "u1": {"name": "Ana", "role": "admin"},
-    "u2": {"name": "Ben", "role": "guest"},
-    "u3": {"name": "Cara", "role": "admin"},
-}
 
-print(users["u1"]["name"])
-print(users["u2"]["name"])
-print(users["u3"]["name"])
 
 
 
