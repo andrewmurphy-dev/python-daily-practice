@@ -17,12 +17,7 @@ for student_id, info in students.items():
 
 
 #question 1 
-school = {
-    "classA": {"teacher": "Ms Lee", "room": 101},
-    "classB": {"teacher": "Mr Kim", "room": 202},
-}
 
-print(school["classB"]["room"])
 
 #question 2
 users = {
