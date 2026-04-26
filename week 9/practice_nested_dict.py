@@ -51,6 +51,16 @@ for user_id, values in users.items():
 
 #question 4 
 #filter by inner value !
+products = {
+    "p1": {"name": "Pen", "price": 2},
+    "p2": {"name": "Desk", "price": 120},
+    "p3": {"name": "Notebook", "price": 5},
+}
+
+for product in products.values():
+    if product["price"] > 4:
+        print(product["name"])
+
 
 #question 5 
 
