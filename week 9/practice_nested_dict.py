@@ -64,16 +64,3 @@ for product in products.values():
 
 #question 5 
 
-scores = {
-    "s1": {"team": "A", "points": 10},
-    "s2": {"team": "B", "points": 7},
-    "s3": {"team": "A", "points": 12},
-    "s4": {"team": "C", "points": 9},
-}
-
-count = 0 
-
-for score in scores.values():
-    if score["team"] == "A":
-        count += 1
-print(count)
