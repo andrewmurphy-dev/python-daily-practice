@@ -8,12 +8,6 @@
 #     The caller (below, when you un-comment) can print the result.
 # ==============================================================================
 
-def square(x):
-    return x ** 2
-
-
-result = square(5)
-print(result) 
 
 
 #this means ** expontiation
