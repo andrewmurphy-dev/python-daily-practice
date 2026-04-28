@@ -43,13 +43,6 @@ print(square_of_seven)
 #     Use if / elif / return. No for-loop.
 # ==============================================================================
 
-def sign(n):
-    if n < 0:
-        return -1 
-    elif n > 0:
-        return 1
-    else:
-        return 0
 
 
 
