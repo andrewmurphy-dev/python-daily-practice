@@ -3,7 +3,12 @@
 
 
 # 6. Write a function that shows what return does to the rest of a function.
+def return_practice(nums):
+    for i in nums:
+        if i == 2:
+            return i 
 
+    return "2 was not found"
     
 
 
