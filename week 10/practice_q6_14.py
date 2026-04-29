@@ -62,23 +62,6 @@ if a < b and b < c:
 # 10. Write code using this condition:
 # elif largest > n > second:
 
-def return_understanding(nums):
-    if nums < 2:
-        return none
-
-
-    largest = float("-inf")
-    second = float("-inf")
-
-    for n in nums:
-        if n > largest:
-            second = largest
-            largest = n
-        elif largest > n > second:
-            second = n 
-
-    return largest, second
-
 
 
 
