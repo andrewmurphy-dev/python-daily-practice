@@ -36,12 +36,6 @@ def return_practice(nums):
 
 # 8. Write a function named second_largest(nums).
 # Return None for [8] and for [2, 2, 2].
-def second_largest(nums):
-    if nums == 8:
-        return None
-    
-    elif nums == [2, 2, 2]:
-        return None
 
 
 #8 should be [8] , beacuae it is a  list 
