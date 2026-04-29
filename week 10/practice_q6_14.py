@@ -102,6 +102,15 @@ def return_understanding(nums):
 # x if condition else y
 
 
+if x > 5:
+    return "big"
+else:
+    return "small"
+
+
+x if > 5 return "big" else "small"
+
+
 
 #you where close !
 
