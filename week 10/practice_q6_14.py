@@ -25,12 +25,7 @@ def return_practice(nums):
 
 #better way to do it is 
 
-def return_practice(nums):
-    if nums > 4:
-        return "big"
 
-    else:
-        return "small"
     
 
 
