@@ -15,6 +15,12 @@ def return_practice(nums):
 
 # 7. Write a function that has two different return paths.
 
+def return_practice(nums):
+    for i in nums:
+        if i > 4:
+            return i 
+        elif i < 4:
+            return i 
 
 
 #better way to do it is 
