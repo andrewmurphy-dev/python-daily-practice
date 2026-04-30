@@ -77,20 +77,6 @@ def sum_list(nums):
 
 
 #questin 6
-def count_positive_nums(nums):
-    if not nums:
-        return None
-
-
-    count = 0
-
-    for num in nums:
-        if num < 0:
-            continue
-        if num > 0:
-            count += 1
-
-    return count
 
 
 
