@@ -2,6 +2,8 @@
 from week_10_basics_revision.week_1 import largest_number
 
 #question 1
+if not nums:
+    return None
 
 #question 2
 
