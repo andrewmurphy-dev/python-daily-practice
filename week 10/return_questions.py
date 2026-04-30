@@ -7,16 +7,6 @@ if not nums:
 
 #question 2
 
-def index_largest(nums):
-    largest = nums[0]
-    largest_index = 0
-
-    for i in range(len(nums)):
-        if nums[i] > largest:
-            largest = nums[i]
-            largest_index = i
-
-    return largest_index, largest
 
 
 
