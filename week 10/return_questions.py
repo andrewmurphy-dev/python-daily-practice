@@ -33,7 +33,15 @@ def index_largest(nums):
 #index of the first negative nums !
 
 
+def index_of_negative_nums(nums):
+    if not nums:
+        return None
 
+
+    for i in range(len(nums)):
+        if nums[i] < 0:
+            return i
+    return None
 
 
 
