@@ -178,6 +178,38 @@ def second_largest2(nums):
 
 
 
+#question 10
+
+
+#list length
+
+#below is asserted expected by hand !
+[]
+[1]
+[2, 3]
+
+
+
+def second_largest(nums):
+    if not nums:
+        return None
+
+    if len(nums) <= 1:
+        return None
+
+    largest = float('-inf')
+    second_largest = float('-inf')
+
+
+    for num in nums:
+        if num > largest:
+            second_largest = largest
+            largest = num
+        elif largest > num and num > second_largest:
+            second_largest = num
+    return second_largest
+
+
 
 
 
