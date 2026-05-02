@@ -211,5 +211,48 @@ def second_largest(nums):
 
 
 
+#question 11
+#find the second largest and largest mixed with postives and negatives
+
+numbers = [-5, -1, -10, 5, 23]
+
+#so the first is we need to organize the funtion !
+
+def find_largest(numbers):
+    if not numbers:
+        return None
+
+
+    #my question is , how do we organize a list
+    #so we use the built in function called sorted !
+
+    #i am also worried how would we find the largest for the negatives
+
+    #
+
+def find_largest(numbers):
+        if not numbers:
+            return None
+        ordered = sorted(numbers)
+
+        largest = float("-inf")
+        second_largest = float("-inf")
+
+        for order in ordered:
+            if order > largest:
+                second_largest = largest
+                largest = order
+            elif largest > order and order > second_largest:
+                second_largest = order
+        return largest, second_largest
+
+
+
+
+
+result = find_largest(numbers)
+print(result)
+
+
 
 
