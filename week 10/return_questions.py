@@ -331,16 +331,33 @@ print(result)
 
 
 
+#question 13
 
 
 
+user = input("enter numbers: ").strip().split()
 
 
+def find_fixed(user):
+    if not user:
+        return None
 
+    user_integers = int(user)
 
-result = find_largest(numbers)
-print(result)
+    if not user_integers.isdigit():
+        return None
 
+    largest_number = float('-inf')
+    second_largest = float('inf')
+
+    for i in user_integers:
+        if i > largest_number:
+            second_largest = largest_number
+            largest_number = i
+        elif largest_number > i and i > second_largest:
+            second_largest = i
+
+    return second_largest
 
 
 
