@@ -141,4 +141,43 @@ for i in range(Len(nums)):
 
 return False
 
+# question 9
+def second_largest(nums):
+    if not nums:
+        return None
+
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] == nums[j]:
+
+
+
+
+    return False
+
+#this is a bad approach , but u had sort of the right idea !
+#we use min , max !
+
+def second_largest2(nums):
+    if not nums:
+        return None
+
+    if min(nums) == max(nums):
+        return None
+
+    largest = float('-inf')
+    second_largest = float('-inf')
+
+    for num in nums:
+        if num > largest:
+            second_largest = largest
+            largest = num
+        elif largest > num < second_largest:
+            second_largest = num
+    return second_largest
+
+
+
+
+
 
