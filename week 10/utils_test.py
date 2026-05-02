@@ -49,6 +49,28 @@ def show_expenses():
 
 
 
+def show_total():
+    total = load_expenses()
+
+
+    if not total:
+        print("no expenses found")
+        return
+
+    print()
+    print("Total expenses")
+    print("-" * 30)
+
+
+
+    total_amount = 0
+
+    for amount in total.values():
+        total_amount += amount
+    print(f"total: {total_amount}")
+    return total_amount
+
+
 
 
 
