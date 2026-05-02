@@ -31,6 +31,22 @@ def add_expenses():
 
 
 
+def show_expenses():
+    show = load_expenses()
+
+    if not show:
+        print("no expenses found")
+        return
+
+    print()
+    print("show expenses")
+    print("-" * 30)
+
+    for product_name, amount in show.items():
+        print("product name", product_name)
+        print("size", amount)
+
+
 
 
 def show_total():
