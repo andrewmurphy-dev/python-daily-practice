@@ -246,6 +246,94 @@ def find_largest(numbers):
                 second_largest = order
         return largest, second_largest
 
+#question 12
+
+
+nums = [-5, 0, 3, 10, 99]
+lo = 0
+hi = 10
+
+
+
+def clamp_list(nums, lo, hi):
+    if not nums:
+        return None
+
+
+    lo = 0
+    hi = 10
+    new_list = []
+
+
+    for num in nums:
+        if num < lo:
+            num = lo
+        elif num > hi:
+            num = hi
+        elif num >= lo and num <= hi:
+             hi = num
+             lo = num
+
+    return new_list.append(num)
+
+#you where pretty close !
+
+
+
+
+    elif num >= lo and num <= hi:
+             hi = num
+             lo = num
+
+    #why do this ?
+#to make changes right ?
+#why do we need to change it ? if we need to leave it alone !
+#just dont include it !
+#    return new_list.append(num)
+#this part here is wrong sadly!
+
+#have no return !
+
+new_list.append(num)
+
+#return new_list
+
+#then u call it !
+
+
+
+
+#solution below !
+
+nums = [-5, 0, 3, 10, 99]
+lo = 0
+hi = 10
+
+def clamp_list(nums, lo, hi):
+    if not nums:
+        return []
+
+    new_list = []
+
+    for num in nums:
+        if num < lo:
+            num = lo
+        elif num > hi:
+            num = hi
+
+        new_list.append(num)
+
+    return new_list
+
+
+result = clamp_list(nums, lo, hi)
+print(result)
+
+
+
+
+
+
 
 
 
