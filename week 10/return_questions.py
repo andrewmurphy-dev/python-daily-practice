@@ -425,6 +425,18 @@ def hard_question(nums, k):
 
 
 
+def nth_largest(nums, k):
+    if not nums:
+        return None
+
+    unique_nums = set(nums)
+    sorted_nums = sorted(unique_nums, reverse=True)
+
+    if k < 1 or k > len(sorted_nums):
+        return None
+
+    return sorted_nums[k - 1]
+
 
 #unique_nums = set(nums)
 #this means take nums and remove duplicates !
