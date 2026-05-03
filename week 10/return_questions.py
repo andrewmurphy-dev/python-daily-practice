@@ -361,3 +361,94 @@ def find_fixed(user):
 
 
 
+
+
+
+
+#simple quick practice
+
+
+# question 1
+def zero_to_zone(x):
+    if x == 0:
+        return None
+
+    return x
+
+
+
+
+#return None if x == 0 else x
+
+
+
+#question 2
+
+
+
+
+if result is None:
+    print("result cannot be None")
+
+#question 3
+
+def name_is_none(name):
+    if name is None:
+        return None
+    return name
+
+#return None if name == "" else name
+
+
+
+
+
+
+#question 4
+
+
+
+def hard_question(nums, k):
+    if not nums:
+        return None
+
+    sorted_nums = sorted(nums, reverse=True)
+    count = 0
+
+    for num in sorted_nums:
+
+
+
+#we want to have largest to smallest !
+
+#this was so hard i was so confused !
+
+
+def nth_largest(nums, k):
+    if not nums:
+        return None
+
+    unique_nums = set(nums)
+    sorted_nums = sorted(unique_nums, reverse=True)
+
+    if k < 1 or k > len(sorted_nums):
+        return None
+
+    return sorted_nums[k - 1]
+
+
+
+#unique_nums = set(nums)
+#this means take nums and remove duplicates !
+
+#my only confusion is here !
+#sorted_nums[k - 1]
+
+#this emans , give me the item at the correct python index for rank k
+
+#so hence why we doen error and validation what evr number user outs in for k we get that as a result  !
+
+
+
+
+
