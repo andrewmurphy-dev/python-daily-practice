@@ -235,34 +235,6 @@ def user_integer_largest(user_integer):
 #    (largest, second_largest).
 #    Test it with at least 3 different lists.
 
-test_1 = [5, 10, 3, 8]
-test_2 = [-10, -3, -50, -1]
-test_3 = [7, 7, 2, 9, 9, 4]
-
-def user_integer_second_largest(test_1):
-    if not isinstance(test_1, list):
-        return None
-
-    if not numbers:
-        return None
-
-    if not len(test_1) < 2:
-        return None
-
-    largest = float("-inf")
-    second_largest = float("-inf")
-
-
-    for num in test_1:
-        if num > largest:
-            second_largest = largest
-            largest = num
-        elif largest > num and num > second_largest:
-            second_largest = num
-    return largest, second_largest
-
-
-
 
 # 8) Write a program that validates edge cases:
 #    - empty list
