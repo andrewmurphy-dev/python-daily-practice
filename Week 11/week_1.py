@@ -87,6 +87,28 @@ for i in numbers:
 # 3) Write a program that finds both the largest and second largest numbers in one pass (single loop).
 #    Example input: [10, 3, 8, 21, 6]
 
+numbers = [10, 3, 8, 21, 6]
+
+
+
+def largest_number(numbers):
+
+    if not numbers:
+        return None
+
+    largest = float("-inf")
+    second_largest = float("-inf")
+
+    for num in numbers:
+        if num > largest:
+            second_largest = largest
+            largest = num
+
+        elif largest > num and num > second_largest:
+            second_largest = num
+
+    return largest, second_largest
+
 
 
 
