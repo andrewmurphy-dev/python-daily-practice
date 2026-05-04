@@ -48,6 +48,29 @@ print(second_largest)
 #noi return from the function ! 
 
 
+def second_largest(numbers):
+    if len(numbers) < 2:
+        return None
+
+    largest = float("-inf")
+    second = float("-inf")
+
+    for n in numbers:
+        if n > largest:
+            second = largest
+            largest = n
+        elif largest > n > second:  # keeps second distinct
+            second = n
+
+    return None if second == float("-inf") else second
+
+
+nums = [4, 9, 2, 15, 7]
+print(second_largest(nums))  # 9
+
+
+
+
 
 numbers = [1, 3, 4, 5]
 
