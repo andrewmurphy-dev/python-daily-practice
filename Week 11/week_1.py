@@ -162,34 +162,6 @@ def negative_list_largest(numbers):
 #    Example input: [5, 12, 12, 9, 3]
 #    Decide and print the second largest DISTINCT number.
 
-def negative_list_second_largest(numbers):
-    if not isinstance(numbers, list):
-        return None
-
-    if not numbers:
-        return None
-
-    if len(numbers) < 2:
-        return None
-
-    unique_values = set(numbers)
-
-    if len(set(unique_values)) < 2:
-        return None
-
-
-    largest = float("-inf")
-    second_largest = float("-inf")
-
-
-    for num in unique_values:
-        if num > largest:
-            second_largest = largest
-            largest = num
-        elif largest > num and num > second_largest:
-            second_largest = num
-
-    return largest, second_largest
 
 
 
