@@ -6,15 +6,6 @@ Topic: Largest Number and Second Largest Number
 # 1) Write a program that takes a list of integers and prints only the largest number.
 #    Example input: [4, 9, 2, 15, 7]
 
-def largest_number(numbers):
-    largest = numbers[0]
-
-    for number in numbers:
-        if number > largest:
-            largest = number
-
-    # return should be outside the for-loop, so loop checks all numbers first
-    return largest
 
 
 question_1 = largest_number([4, 9, 2, 15, 7])
