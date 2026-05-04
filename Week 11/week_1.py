@@ -23,6 +23,24 @@ print(question_1)
 # 2) Write a program that takes a list of integers and prints the second largest number.
 #    Example input: [4, 9, 2, 15, 7]
 
+
+
+
+def second_Largest(numbers):
+   largest = numbers[0]
+   second_largest = numbers[0] 
+
+   for i in numbers:
+      if i > largest:
+      largest = i 
+   
+   else: 
+      if i != largest 
+      second_largest = i 
+
+print(second_largest)
+
+
 #missing : after both if conditions ! 
 #else indentation is wrong ! it became a for-else, instead if-else 
 #print(second_largest) this is outside the function scope ! 
