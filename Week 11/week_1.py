@@ -116,6 +116,29 @@ def largest_number(numbers):
 #    Print largest and second largest
 
 
+
+
+def negative_list_largest(numbers):
+    if not numbers:
+        return None
+
+    largest = float("-inf")
+    second_largest = float("-inf")
+
+    for num in numbers:
+        if num > largest:
+            second_largest = largest
+            largest = num
+
+        elif largest > num and num > second_largest:
+            second_largest = num
+
+    return largest, second_largest
+
+
+
+
+
 #so its largest , anf second largest
 
 #so the further right the bigger
