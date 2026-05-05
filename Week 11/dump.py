@@ -17,6 +17,12 @@
 
 
 
+def save_expenses(expenses):
+    with open("expenses.json", "w", encoding="utf-8") as f:
+        json.dump(expenses, file, indent=4)
+
+
+
 
 #why do some save_expenses have a parameter and some do not!?
 #when a function needs data from the outside , we give it a parameter
