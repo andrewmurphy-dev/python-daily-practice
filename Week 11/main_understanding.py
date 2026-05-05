@@ -1,12 +1,6 @@
 
-
-
-
-
-
-
 def main():
-    expenses = load_expenses()
+    expenses = load_expenses() #here we call load expenses file in ram 
 
     if expenses is None:
         return
