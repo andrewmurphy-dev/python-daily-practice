@@ -1,4 +1,6 @@
 #question 1
+def first_three(text):
+    return text[:3]
 
 
 
