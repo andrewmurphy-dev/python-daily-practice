@@ -15,6 +15,14 @@ print(result)
 
 
 
+
+#question 3
+
+def reverse(text):
+    return text[len(text) - 1: len(text) - 1: -1]
+#why do we use minus 1?
+#revese starts at 1 not 0
+
 #question 4
 def middle_text(text):
     return text[2:5:1]
