@@ -56,6 +56,9 @@ def second_hald(text):
     return text[len(text) // 2:len(text) - 1 :1]
 
 #question 11
+def swap_edges(text):
+    middle = len(text) // 2
+    return text[len(text) - 3: len(text): 1] + text[middle - 1: middle + 2: 1] + text[0:middle: 1]
 
 
 #question 12
