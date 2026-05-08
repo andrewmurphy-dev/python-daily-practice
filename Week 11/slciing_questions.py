@@ -42,3 +42,42 @@ def every_second_char(text):
 #question 8
 def every_second_reverse(text):
     return text[len(text): len(text) - 2: -2]
+
+
+#question 9
+
+def first_half(text):
+    return text[0:len(text) // 2 :1]
+
+
+#question 10
+
+def second_hald(text):
+    return text[len(text) // 2:len(text) - 1 :1]
+
+#question 11
+def swap_edges(text):
+    middle = len(text) // 2
+    return text[len(text) - 3: len(text): 1] + text[middle - 1: middle + 2: 1] + text[0:middle: 1]
+
+#question 12
+
+def reverse_last_three(text):
+    return text[len(text) -1: -len(text) - 1: -1]
+
+#question 13
+
+def reverse_first_three(text):
+    return text[2:-len(text) -1: -1]
+
+#question 14
+def remove_middle(text):
+    return text[0:3:1] + text[-3:len(text):1]
+
+#question 15
+
+def middle_reverse(text):
+    middle = len(text) // 2
+    return text[middle + 1: -len(text) - 1: -1]
+
+
