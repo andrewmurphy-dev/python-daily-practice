@@ -71,8 +71,6 @@ def reverse_first_three(text):
     return text[2:-len(text) -1: -1]
 
 #question 14
-def remove_middle(text):
-    return text[0:3:1] + text[-3:len(text):1]
 
 #question 15
 def middle_reverse(text):
