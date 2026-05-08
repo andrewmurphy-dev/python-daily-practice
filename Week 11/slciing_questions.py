@@ -61,7 +61,8 @@ def swap_edges(text):
     return text[len(text) - 3: len(text): 1] + text[middle - 1: middle + 2: 1] + text[0:middle: 1]
 
 #question 12
-
+def reverse_last_three(text):
+    return text[len(text) -1: -len(text) - 1: -1]
 
 #question 13
 def reverse_first_three(text):
