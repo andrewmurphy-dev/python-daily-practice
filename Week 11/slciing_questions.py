@@ -76,8 +76,5 @@ def remove_middle(text):
 
 #question 15
 
-def middle_reverse(text):
-    middle = len(text) // 2
-    return text[middle + 1: -len(text) - 1: -1]
 
 
