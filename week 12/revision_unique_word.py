@@ -33,24 +33,6 @@ for word, count in counts.items():
 
         #question 2
 
-        def unique_word():
-
-            words_sentence = input("enter a sentence: ").lower().strip()
-
-            counts = {}
-
-            for word in words_sentence:
-                if word in counts:
-                    counts[word] += 1
-
-                else:
-                    counts[word] = 1
-
-
-            for word, count in counts.items():
-                if count > 1:
-                    print(word)
-
 
 
 #you forgot #split()
