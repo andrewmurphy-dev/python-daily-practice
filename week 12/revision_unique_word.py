@@ -56,3 +56,32 @@ for word, count in counts.items():
 
 #you forgot #split()
 #also when you make a function do not forget to call it ! 
+
+
+#question 3 
+
+def slightly_hard():
+    sentence = input("enter a sentence: ").lower().strip().split()
+    counts = {}
+    largest = 0
+    largest_word = ""
+
+    for word in sentence:
+        if word in counts:
+            counts[word] += 1
+
+        else:
+            counts[word] = 1
+
+
+    for word, count in counts.items():
+        if count > largest:
+            largest = count
+            largest_word = word
+
+    return largest_word, largest
+
+
+
+word, count = slightly_hard()
+print(word, "appears", count, "times")
