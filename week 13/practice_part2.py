@@ -1,3 +1,22 @@
+deck_lines = [
+    "4 Lightning Bolt",
+    "2 Mountain",
+    "3 Monastery Swiftspear",
+    "bad line here",
+    "1 Goblin Guide",
+    "",
+    "x Shock",
+    "5"
+]
+
+
+
+#quantity , card name
+
+
+
+
+
 def deck_lines_test(deck_lines):
 
     if not deck_lines:
