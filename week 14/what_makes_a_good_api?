@@ -1,0 +1,141 @@
+What Makes a Good FastAPI Backend?
+
+1. Clear route design
+- Routes should describe resources clearly.
+- Good: GET /menu
+- Good: POST /menu
+- Good: GET /tickets/{ticket_id}
+- Bad: GET /getMenuDataNow
+- Bad: POST /do_ticket_thing
+
+2. Correct HTTP methods
+- GET = read data
+- POST = create/send data
+- PUT/PATCH = update data
+- DELETE = delete data
+- Do not use GET to create or change data.
+
+3. Predictable JSON responses
+- Every endpoint should return clean, structured JSON.
+- The frontend should not have to guess what shape the response has.
+- Good APIs are boring and predictable.
+
+4. Proper status codes
+- 200 = success
+- 201 = created
+- 400 = bad request
+- 401 = not authenticated
+- 403 = not allowed
+- 404 = not found
+- 409 = conflict with current state
+- 422 = validation error
+- 500 = server/internal error
+
+5. Input validation
+- Never trust the client.
+- Validate names, prices, quantities, IDs, payment amounts, categories, and required fields.
+- Bad input should be rejected before it reaches business logic.
+
+6. Pydantic models for request bodies
+- Use BaseModel classes for incoming JSON.
+- Do not accept random dictionaries everywhere.
+- Example:
+  class MenuItemCreate(BaseModel):
+      name: str
+      price: int
+      category: str
+
+7. Separate request models and response models
+- Create model = what client sends.
+- Response model = what API returns.
+- Do not always expose internal database shape directly.
+
+8. Proper error handling
+- If a menu item does not exist, return 404.
+- If a ticket is already paid, return 409.
+- If a price is invalid, return 400 or 422.
+- Do not return fake success when something failed.
+
+9. Business rules live in the backend
+- The frontend can display buttons.
+- The backend protects the system.
+- Example rules:
+  - Paid tickets cannot be edited.
+  - Quantity must be greater than 0.
+  - Payment amount must match ticket total.
+  - Menu item must exist before adding it to a ticket.
+
+10. Clean route functions
+- Route functions should be readable.
+- Do not put huge messy logic inside every endpoint.
+- Eventually split logic into service/helper functions.
+
+11. Consistent naming
+- Use clear names:
+  menu_items
+  tickets
+  ticket_items
+  payments
+- Avoid vague names:
+  data
+  stuff
+  thing
+  result2
+
+12. Good project structure
+- Small learning project can start in main.py.
+- Bigger project should split files:
+  main.py
+  routers/menu.py
+  routers/tickets.py
+  models.py
+  schemas.py
+  database.py
+  services/
+
+13. Use routers when the app grows
+- menu routes go together.
+- ticket routes go together.
+- payment routes go together.
+- analytics routes go together.
+
+14. Use a database eventually
+- In-memory lists are fine for learning.
+- Real APIs need persistent storage.
+- If the server restarts, in-memory data disappears.
+
+15. Do not expose secrets
+- Never hardcode real API keys in public code.
+- Never commit secrets to GitHub.
+- Use environment variables later.
+
+16. Automatic docs should be useful
+- FastAPI gives /docs automatically.
+- Good model names, route names, and response models make the docs clearer.
+
+17. Test the API like a client would
+- Test GET routes.
+- Test POST routes.
+- Test bad input.
+- Test missing IDs.
+- Test already-paid tickets.
+- Test empty menu names.
+- Test negative prices.
+
+18. Frontend-friendly responses
+- Chuck/TypeScript should be able to call the API and console.log clean JSON.
+- If the frontend has to fight your API, your backend design is weak.
+
+19. Keep V1 boring
+- No auth yet.
+- No Stripe yet.
+- No voice yet.
+- No AI yet.
+- No deployment obsession yet.
+- First make menu/ticket/payment logic correct.
+
+20. A good API protects the rules of the product
+- The API is not just “return data.”
+- The API decides what is allowed.
+- The API rejects bad actions.
+- The API gives the frontend clean, reliable results.
