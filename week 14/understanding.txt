@@ -1,0 +1,71 @@
+#so what is pydantic !
+
+
+this is a package or library
+
+its purpose is too !
+its job is data validation !
+
+its creates a data model !
+that says:
+
+A menu item must have:
+- name as a string
+- price as an integer
+- category as a string
+
+
+
+so you basically make a class instead of manually typing isinstance !
+
+
+
+
+
+for example we also need to add field !
+
+field is a pydantic helper !
+that lets you add extra rules ! and meta data to the model field
+
+
+
+for example (without field)
+
+class MenuItem(BaseModel):
+    name: str
+    price: int
+    category: str
+
+
+ this only checks basic types !
+
+
+name must be str
+price must be int
+category must be str
+
+
+
+
+for example (with field)
+
+from pydantic import BaseModel, Field
+
+
+class MenuItem(BaseModel):
+    name: str = Field(min_length=1)
+    price: int = Field(gt=0)
+    category: str = Field(min_length=1)
+
+
+
+name must be str AND at least 1 character
+price must be int AND greater than 0
+category must be str AND at least 1 character
+
+
+REMEMBER THIS !!!!!!!!!!!
+
+min_length and gt are built-in validation options inside Pydantic’s Field().
+
+
