@@ -1,51 +1,74 @@
-#here we do a real world example 
+
+#practice question 
+
+class Expense:
+    def __init__(self, title, amount, category):
+        self.title = title
+        self.amount = amount 
+        self.category = category 
+
+
+        def display(self):
+            print(f"{title} - ¥{amount} - {category}")
+#mistake you must include self. in the method function 
+
+
+expense_1 = Expense("Keyboard", 30000, "Tech")
+expense_2 = Expense("Coffee", 500, "Food")
+expense_3 = Expense("Train", 250, "Transport")
+
+
+
+
+
+expense_1.display()
+
+
+#we do not use print() 
+#as it is already contained in the method function 
+
+
+
+
+
+
+
+#question 2 
 
 class Contact:
     def __init__(self, name, email, phone):
         self.name = name 
-        self.email = email
-        self.phone = phone
+        self.email = email 
+        self.phone = phone 
+
+
+    def display(self):
+        print(f"Name: {self.name} Email: {self.email} Phone {self.phone}")
 
 
 
-#bow we create a object of that class 
+contact_1 = Contact("Andrew", "andrew@gmail.com", 12345)
+contact_2 = Contact("Sarah", "sarah@gmail.com", 65252552)
 
 
-contact_1 = Contact("Andrew", "andrewmurphy@gmail.com", "12345")
-print(contact_1)
-print(contact_1.__dict__)
-
-
-
-#so when i print this in the terminal !
-
-#<__main__.Contact object at 0x100b8c6e0>
-
-
-#so what is this saying ?
-
-#so __main__
-#this is saying your class was created here in this module 
-#confusion 
-
-#the module i am currently running on is actually practice.py 
-#python treats it as the main running script 
+contact_1.display()
+contact_2.display() 
 
 
 
-#Contact 
-#Class name 
+#problems 
 
-# 0x100b8c6e0
-
-#this is memory style identity 
+#this part is structurely wrong  just the UI 
+#print(f"Name: {self.name} Email: {self.email} Phone {self.phone}")
 
 
-#we can see the data !
-#we can use __dict__
 
 
-#{'name': 'Andrew', 'email': 'andrewmurphy@gmail.com', 'phone': '12345'}
 
-#it is in dictionary structure ! 
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Email: {self.email}")
+        print(f"Phone: {self.phone}")
+        print()
+
 
