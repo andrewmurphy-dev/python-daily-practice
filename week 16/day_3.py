@@ -35,25 +35,6 @@ expense_1.category
 
 
 
-class Contact:
-    def __init__(self, name, email, phone)
-        self.name = name
-        self.email = email 
-        self.phone = phone 
-
-
-
-       #below is the method
-        def display(self):
-            print(f"{self.name}, {self.email}, {self.phone}")
-
-
-contact_1 = Contact("Andrew", "andrewmurphy@email.com", "0894766327")
-
-
-contact_1.display()
-#or we can use ___dict___
-print(contact_1.__dict__)
 
 
 
