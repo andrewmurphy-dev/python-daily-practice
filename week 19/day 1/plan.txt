@@ -1,0 +1,5 @@
+so today we are going to understand pytest ! 
+
+so first we need to install it first ! 
+
+python -m pip install pytest

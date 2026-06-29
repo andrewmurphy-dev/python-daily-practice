@@ -1,0 +1,27 @@
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+--> install packages ! 
+
+
+
+
+
+mkdir --> make directory 
+
+cat prints the contents into your terminal ! 
+
+
+| Tool    | Job                            |
+| ------- | ------------------------------ |
+| Postman | Manual API testing             |
+| Pytest  | Automated repeatable testing   |
+| Postman | Good while building/debugging  |
+| Pytest  | Good before committing/merging |
+| Postman | You remember to click Send     |
+| Pytest  | Runs all checks in one command |
+| Postman | Human-driven                   |
+| Pytest  | Code-driven                    |
+
+
