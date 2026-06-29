@@ -1,0 +1,54 @@
+1. how to get your database name, password ??
+
+
+#so u get the name of the Database u created ! 
+
+#and u use the origional password u downloaded Postgres SQL with 
+
+#if u do not know how to get the password, follow next steps ! 
+
+ALTER USER postgres WITH PASSWORD 'postgres123';
+
+postgres123
+
+this above is your new password ! 
+
+
+
+
+2. next u need to create .env file 
+
+and inside it, u need:
+
+DATABASE_URL=postgresql+psycopg://postgres:YOUR_PASSWORD@localhost:5432/YOUR_DATABASE_NAME 
+
+DATABASE_URL = postgresql+psycopg://postgres:____________@localhost:__PORT__/__DATABASE__NAME 
+
+#no spaces 
+#no quotation marks 
+
+3. actiuvate ur environment first , 
+
+in your .venv there is a folder called scripts ! 
+
+
+on windows its 
+.\.venv\Scripts\Activate.ps1
+
+
+
+4. install packages ! 
+
+pip install fastapi uvicorn sqlalchemy "psycoph[binary]" python-dotenv 
+
+
+
+5. save your current python packages into a file !
+
+pip freeze > requirements.txt
+
+
+to check: 
+
+pip freeze 
+

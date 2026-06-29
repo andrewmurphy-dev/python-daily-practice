@@ -1,0 +1,29 @@
+inside the .env you put the database url 
+
+.env is just a file that stores secret/config values 
+
+for example 
+
+DATABASE_URL=postgresql+psycopg://postgres:mypassword@localhost:5432/bar_ticket_api
+
+.env file = the storage box
+DATABASE_URL = the name of the value
+postgresql+psycopg://... = the actual database URL
+
+.env file
+   ↓
+DATABASE_URL=postgresql+psycopg://...
+   ↓
+load_dotenv()
+   ↓
+os.getenv("DATABASE_URL")
+   ↓
+Python now has the database URL
+   ↓
+create_engine(DATABASE_URL)
+
+u get the url in dbeaver 
+Open DBeaver
+Right-click your PostgreSQL connection
+Click Edit Connection
+Look at these fields:

@@ -1,0 +1,15 @@
+BarTicket-API/
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   └── db.py
+├── .env
+├── .gitignore
+└── requirements.txt
+
+
+
+
+
+today we will focus on main.py
+
