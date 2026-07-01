@@ -25,3 +25,15 @@ cat prints the contents into your terminal !
 | Pytest  | Code-driven                    |
 
 
+
+
+touch --> make a file
+
+if ur in the correct directory u just go touch --> file name
+
+
+if u do create a directory 
+
+you can go touch ___dir-name___/__file__name__
+
+to open it , use code ___file __name__
