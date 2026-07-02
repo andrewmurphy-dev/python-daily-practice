@@ -18,8 +18,9 @@ source .venv/bin/actibate ---> activate the enviroenemnt
 python3 -m pip install pytest ---> now pytest is in your .venv 
 
 
-#i assume i need to create a requriements.txt file to record what we have installed ! 
+so this command python3 -m pip freeze > requirements.txt
 
-#then we update it with pip freeze > requruirements.txt 
+creates a text file called requirements auto 
 
-#so requirements.tct is like the shopping list of the packages we have installed , we neeed to update ! 
+you can also create it auto , with touch requirements.txt
+
