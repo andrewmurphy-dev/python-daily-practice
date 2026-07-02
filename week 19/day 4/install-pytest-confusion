@@ -1,0 +1,25 @@
+how do we install pytest !???
+
+this is very important ! 
+
+
+also another confusion when i clone a repo , i knew i had .venv inside it , do i need to activate .venv ?
+
+also when i create .venv does this create a requirements.txt file?
+
+
+
+python3 -m venv .venv  ---> create environemnt 
+
+
+source .venv/bin/actibate ---> activate the enviroenemnt 
+
+
+python3 -m pip install pytest ---> now pytest is in your .venv 
+
+
+#i assume i need to create a requriements.txt file to record what we have installed ! 
+
+#then we update it with pip freeze > requruirements.txt 
+
+#so requirements.tct is like the shopping list of the packages we have installed , we neeed to update ! 
