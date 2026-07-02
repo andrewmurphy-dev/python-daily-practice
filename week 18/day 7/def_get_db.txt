@@ -1,0 +1,39 @@
+#biggest confusion is here 
+
+
+
+
+
+
+#please try to remember this !
+
+
+
+def get_db():
+
+db = SessionLocal()
+
+try:
+yield db
+
+finally:
+db.close() 
+
+
+
+
+#what does yield and finally mean ???
+
+
+yield dd 
+
+this means give fastapi this database , so the route can use it ! 
+
+
+
+$what does finally mean?
+
+
+"no matter what happens , close the database"
+
+
