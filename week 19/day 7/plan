@@ -1,0 +1,32 @@
+today we are gonna batch practice pytest 
+
+so realizing with test client , we have two forms of test 
+
+the 
+
+
+Test the HTTP response
+Test the endpoint response data
+
+
+---
+HTTP response body
+
+assert response.status_code == 200
+assert response.status_code == 422
+assert response.status_code == 401
+assert response.status_code == 409
+
+
+
+---
+
+endpoint 
+
+data = response.json()
+
+assert set(data.keys()) == {"message", "user"}
+assert isinstance(data["message"], str)
+assert isinstance(data["user"], dict)
+
+we wanna see if it sends back the correct data 
