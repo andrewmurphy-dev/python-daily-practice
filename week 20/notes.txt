@@ -1,0 +1,69 @@
+so we are gonna take notes for understanding SQL more 
+
+SQLAlchemy this allows to manage the connection cleanly between fastapi 
+and psotgresql database 
+
+so think SQLAlchemy = clean connection 
+
+
+#driver 
+
+so you need to install a driver 
+pip install psycopg[binary] sqlalchemy python-dotenv
+
+remmeber we have a psycophg driver 
+
+we have the local host where the database (postgresql is hosted) or it can be hosted somewhere else!
+
+
+
+
+
+#engine
+so engine 
+this managaes the connection between the fastapi and the postgresql database 
+
+so its the main database connection manaager 
+gives sessions a way to talk to the database 
+
+
+
+
+
+
+
+#session 
+
+what is session ?
+
+this is one active conversation between your python app and the database 
+
+in code it often looks like 
+
+
+what is sessionlocal?
+this makes sessions 
+
+so in the code you need to create the session factory 
+
+SessionLocal = sessionmaker( 
+    bind=engine, 
+
+)
+
+
+-bind engine ?
+the engine knows the database url , so we neeed the session to know the url to speak to the database 
+
+
+#so below is sort of a QA
+- autoflush=False 
+this is a little complex , cause we have nto done orm yet !
+
+- basically it means the request is in a waiting room in side the session 
+- not fully sent to the database yet ! 
+
+
+-autocommit=False ?
+Do not permanently save database changes automatically.
+Wait until I explicitly say db.commit().
