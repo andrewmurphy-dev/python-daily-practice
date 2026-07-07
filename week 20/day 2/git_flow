@@ -1,0 +1,142 @@
+so one big confusion is the flow of creating the environment and changing the interpreter 
+
+step 1:
+cd into the directory !!!!!!
+type pwd
+
+and go into the directory 
+
+cd "/Users/andrewmurphy/practice .venv"
+
+
+step 2:
+
+python3 -m venv .venv
+
+
+step 3:
+
+source .venv/bin/acctivate
+
+step 4:
+Cmd + shift + P
+
+search python: Select Interpreter 
+
+choose : ./.venv/bin/python
+
+
+
+so how do i know i have choses this interpreter?
+
+which python ! 
+
+the last tell you ! 
+
+
+
+Step 5
+Install packages 
+
+so confusion ! 
+
+you can install multiple packages 
+
+python -m pip install pytest
+
+python -m pip install fastapi uvicorn sqlalchemy python-dotenv
+
+
+#you can also install multiple packages with psycopg too 
+
+python -m pip install fastapi uvicorn sqlalchemy "psycopg[binary]" python-dotenv
+pip install package1 package2 package3
+
+
+
+another confusion 
+If in day 1 , you can install packages , 
+then day 2 you install other packages 
+
+python -m pip install pytest
+python -m pip freeze > requirements.txt
+
+
+#remember requirements.txt is your saved package list 
+
+Install package
+Update requirements.txt
+
+Install another package later
+Update requirements.txt again
+
+
+
+step 6:
+
+save installed packages to requirements.txt 
+
+#this creates a requirements.txt file 
+
+in the file you will see this 
+
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anyio==4.14.1
+certifi==2026.6.17
+charset-normalizer==3.4.7
+click==8.4.2
+fastapi==0.139.0
+h11==0.16.0
+idna==3.18
+iniconfig==2.3.0
+packaging==26.2
+pluggy==1.6.0
+pydantic==2.13.4
+pydantic_core==2.46.4
+Pygments==2.20.0
+pytest==9.1.1
+python-dotenv==1.2.2
+requests==2.34.2
+SQLAlchemy==2.0.51
+starlette==1.3.1
+typing-inspection==0.4.2
+typing_extensions==4.16.0
+urllib3==2.7.0
+uvicorn==0.50.2
+
+
+
+
+step 7 make gitignore 
+
+put this inside it 
+
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+
+
+.venv/
+  do not upload your whole virtual environment
+
+.env
+  do not upload passwords / secret keys / database URLs
+
+__pycache__/ and *.pyc
+  do not upload Python cache files
+
+.pytest_cache/
+  do not upload pytest cache
+
+
+
+
+
+  Step 8:
+
+  everytime you go back to the project ! 
+
+  
