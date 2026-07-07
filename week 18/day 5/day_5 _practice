@@ -1,24 +1,19 @@
-import os 
+import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
-from sqlalchemy import sessionmaker 
-
-
-
+from sqlalchemy.orm import sessionmaker
 
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 if DATABASE_URL is None:
-    raise RunetimeError("DATABASE_URL is not live!")
-
+    raise RuntimeError("DATABASE_URL is not live!")
 
 engine = create_engine(
     DATABASE_URL,
     pool_pre_ping=True
 )
-
 
 SessionLocal = sessionmaker(
     bind=engine,
@@ -28,8 +23,7 @@ SessionLocal = sessionmaker(
 
 
 def get_db():
-
-    db = sessionmaker()
+    db = SessionLocal()
 
     try:
         yield db
@@ -38,24 +32,10 @@ def get_db():
         db.close()
 
 
-    def db_test_connection():
-        with engine.connect() as connection:
-            result = connection.execute(text("SELECT 1"))
-            return result.scalar_one() 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
+def db_test_connection():
+    with engine.connect() as connection:
+        result = connection.execute(text("SELECT 1"))
+        return result.scalar_one()
 
 
 
