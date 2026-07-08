@@ -1,0 +1,58 @@
+so here we create th eengine ! 
+
+
+so 
+
+this is the structure 
+
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True
+)
+
+
+for basic sqlalchemy this is the requirements to create the engine ! 
+
+
+so this part engine = create_engine(DATABASE_URL) this creates the engine connection manager 
+
+
+
+confusion 
+
+SQLALCHEMY 
+this helps python talk to the database !
+
+engine --> managaes database connections ! 
+
+
+connection pool ---> resuses connections instead of opening a new one every time !
+
+
+sessions --> one working conversation with the databse 
+
+
+
+ORM -->  lets you work with rows as python obkects 
+
+
+SQL tools , lets you run SQL in a cleaner python way ! 
+
+
+
+so pool pre ping 
+
+
+pool
+  = reusable database connections
+
+pre
+  = before
+
+ping
+  = quick test/check
+
+pool_pre_ping
+  = check the pooled connection before using it
+
+  
