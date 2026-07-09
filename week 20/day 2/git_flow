@@ -46,6 +46,8 @@ python -m pip install pytest
 
 python -m pip install fastapi uvicorn sqlalchemy python-dotenv
 
+python -m pip install fastapi uvicorn sqlalchemy "psycopg[binary]" python-dotenv
+
 
 #you can also install multiple packages with psycopg too 
 
