@@ -1,0 +1,13 @@
+today we are gonna implment syntax and understand and fix our project ! 
+
+
+source .venv/bin/activate 
+
+python -m pip install fastapi uvicorn sqlalchemy "psycopg[binary]" python-dotenv
+
+
+-- this also implements os !
+
+
+python -m pip install pytest 
+

@@ -150,3 +150,23 @@ because it makes your terminal use
 
 .venv/bin/python
 
+
+confusion !!!!
+
+so my question is everytime later i add a new package do i need to update gitignore?
+
+No 
+
+only requirements.txt 
+
+
+after adding new packages two days alater and updating requiremmenrts.txt do i need to change my interpreter?
+
+
+
+no.
+
+If you are still using the same project and same .venv, you do not need to change the interpreter again.
+
+
+so its important that vscode , pylance , use the correct python environment 
