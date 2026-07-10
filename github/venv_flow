@@ -105,10 +105,17 @@ typing_extensions==4.16.0
 urllib3==2.7.0
 uvicorn==0.50.2
 
+Step 7
+make .env file and use your databse name, password from db beaver to connect to the host 
+
+and also test it !
+
+th-system on  env-test via  v3.14.0 ❯ python -c "from app.db import db_test_connection; print(db_test_connection())"
+1
+python-cli-auth-system on  env-test via  v3.14.0 took 3s ❯ 
 
 
-
-step 7 make gitignore 
+step 8 make gitignore 
 
 put this inside it 
 
@@ -135,7 +142,7 @@ __pycache__/ and *.pyc
 
 
 
-  Step 8:
+  Step 9:
 
   everytime you go back to the project ! 
 
@@ -170,3 +177,19 @@ If you are still using the same project and same .venv, you do not need to chang
 
 
 so its important that vscode , pylance , use the correct python environment 
+
+
+so when you make a .env file , you need to test the connection to see if the connection is conneceted to the database !
+
+the command calls the db_test_connection, uses scalar_one 
+
+
+
+
+##below 
+
+python -c "from app.db import db_test_connection; print(db_test_connection())"
+
+th-system on  env-test via  v3.14.0 ❯ python -c "from app.db import db_test_connection; print(db_test_connection())"
+1
+python-cli-auth-system on  env-test via  v3.14.0 took 3s ❯ 
