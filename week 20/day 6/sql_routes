@@ -1,0 +1,71 @@
+so how do we implement our sql into the api routes?
+
+
+so we need to know threse packages ! 
+
+
+from fastapi import Depends
+from sqlalchemy import text
+from sqlalchemy.orm import Session
+from app.db import get_db
+
+
+the word dependency gets used in two different ways 1 
+
+1. package dependency ! 
+
+
+2. FastAPI dependency ! 
+
+This means something FastAPI prepares for a route before the route runs.
+
+for example 
+
+
+def get_users(db: Session = Depends(get_db)) --> For this request, create a db session and pass it into the route.
+
+
+#get db is our function 
+
+
+def get_db():
+    db = SessionLocal()
+
+    try:
+        yield db
+
+    finally:
+        db.close()
+
+
+
+pip dependency = installed library
+FastAPI dependency = value/function injected into a route
+
+
+
+@router.get("")
+def get_users(db: session = depends(get_db)):
+result = db.execute(text(___________________))
+
+
+
+
+so this part here ___________________
+
+it is recommend that we do not use Select * from users 
+
+why ?
+
+for app code its better to write the exact columns
+
+why?
+
+
+it makes the api contact clear 
+
+it avoid suprise if the table changes 
+
+safer 
+
+easy to review 
