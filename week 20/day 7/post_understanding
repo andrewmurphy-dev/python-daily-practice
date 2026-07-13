@@ -1,0 +1,124 @@
+this is the logic for post router to talk to the postgresql database 
+
+
+
+
+1. Receive request.name and request.password
+2. Insert them into PostgreSQL
+3. Let PostgreSQL create id and created_at
+4. Return the inserted user
+
+
+
+###1
+@router.post("")
+def create_user(Request: CreateStructure, db: Session = Depends(get_db))
+
+so what is request ?
+
+request represents the JSON body sent in the HTTP request.
+
+for example 
+
+{
+  "name": "andrew",
+  "password": "1234"
+}
+
+
+request = CreateStructure(name="andrew", password="1234")
+
+so its just a variable pounting to a pydantic model in mmeory !
+
+
+HTTP request body JSON
+        ↓
+FastAPI/Pydantic validation
+        ↓
+Python object in memory
+        ↓
+request variable points to that object
+
+
+
+###2
+
+
+"""
+...
+"""
+
+this means create a string that can span multiple lines !
+
+
+
+
+
+###3
+
+SQL parameter placeholder
+
+THIS IS REPRESENTED BY A COLON ! 
+
+
+so it means put the parameter here 
+
+VALUES (:name, :password)
+
+
+for example 
+
+INSERT INTO users (name, password) 
+VALUES (:name, :password)
+
+
+
+
+:name      -> request.name
+:password  -> request.password
+
+
+
+
+
+
+
+
+@router.post("")
+def create_user(request: CreateStructure, db: Session = Depends(get_db)):
+    result = db.execute(
+        text("""
+            INSERT INTO users (name, password)
+            VALUES (:name, :password)
+            RETURNING id, name, password, created_at
+        """),
+        {
+            "name": request.name,
+            "password": request.password,
+        },
+    )
+
+    db.commit()
+
+    row = result.mappings().one()
+
+    return {
+        "message": "Signed up successfully!",
+        "user": {
+            "id": row["id"],
+            "name": row["name"],
+            "password": row["password"],
+            "created_at": int(row["created_at"].timestamp()),
+        },
+    }
+
+    
+
+
+         {
+            "name": request.name,
+            "password": request.password,
+        },
+
+
+#why show this in the db.execute? just to tell the query what the name, password is ! 
