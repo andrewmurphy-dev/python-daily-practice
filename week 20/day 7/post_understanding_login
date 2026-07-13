@@ -1,0 +1,25 @@
+
+
+this is for login user, very very similar structure just the query is different 
+
+
+@router.post("/login")
+def login(request: CreateStructure, db: Session = Depends(get_db)):
+    result = db.execute(
+        text("""
+            SELECT id, name, password, created_at
+            FROM users
+            WHERE name = :name AND password = :password
+        """),
+        {
+            "name": request.name,
+            "password": request.password,
+        },
+    )
+
+    user = result.mappings().first()
+
+    if user is None:
+        raise HTTPException(status_code=401, detail="Invalid username or password")
+
+    return {"message": "login successful!"}
