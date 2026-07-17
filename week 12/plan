@@ -1,0 +1,53 @@
+todays goal , load boros aggro deck and make the program survive broken lines
+
+name of the file!
+
+Deck - Boros Aggro.txt
+
+this is a text file , like in day 3 , this is a text file
+
+text file is more annoying than JSON file because it has no built in structure
+
+
+
+#so i ran the code and the file but i said no file found !
+
+so we need to do this !
+
+import os
+
+print(os.getcwd())
+print(os.listdir())
+
+
+this os a debug check
+
+it tells you where python is looking for your file !
+
+
+seems like we have two options
+
+
+#option 1
+use the full path
+
+with open("/Users/andrewmurphy/Downloads/Deck - Boros Aggro.txt", "r", encoding="utf-8") as file:
+
+#option 2
+make a file and past the deck list into it !
+
+
+
+
+what does maxsplit do?
+
+it controls how many times python splits a string
+
+for example
+
+parts = line.split(maxsplit=1)
+print(parts)
+
+#output
+
+["4", "Ajani, Nacatl Pariah"]

@@ -1,0 +1,30 @@
+u must select the correct virtual environment 
+
+u must use the same .venv where u installed the packages 
+
+u must do 
+
+control + shift + p 
+
+to choose the correct environemt 
+
+what is virtual environemnt?
+
+it isolates your python packages 
+
+usually inside your .venv folder 
+
+-- it stores the packages your project needs 
+
+
+the virtual environment answers 
+
+“Which Python packages does this project use?”
+“How do I stop this project’s packages from messing with other projects?”
+“How do I keep FastAPI project packages separate from another app?”
+
+
+
+
+
+

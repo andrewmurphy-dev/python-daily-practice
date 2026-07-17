@@ -1,0 +1,89 @@
+so what do u need to import for test client 
+
+With `TestClient`, pytest can fake that:
+
+
+pytest -> TestClient -> FastAPI route -> response
+
+
+
+
+
+from fastapi.testclient import TestClient
+
+from app.main_api import app
+
+
+client = TestClient(app)
+
+
+
+so here u do not call functions 
+
+
+
+status code is the first important step ! 
+
+
+to see if the request went through 
+
+
+
+For normal function tests, the test name often matches the function:
+def test_sign_up_dict_returns_signup_payload():
+Because you are directly testing:
+sign_up_dict()
+But for API route tests, you are not directly calling the route function.
+You are sending a fake HTTP request:
+response = client.get("/users")
+So the test name describes the behavior of the endpoint, not the Python function name.
+
+
+
+
+Normal function test:
+name it after the function behavior.
+
+API route test:
+name it after the HTTP endpoint behavior.
+
+
+so for example show users 
+
+get_users_response_return_users
+
+
+
+
+
+for example
+
+
+client = TestClient(app)
+
+#so lets test GET / users 
+
+
+#so the function we call is the response function 
+
+
+
+def test_get_users_response_list():
+    response = client.get("/users")
+
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)
+    
+
+
+#you also need to check if the response from the endpoint is sending the correct format 
+
+
+
+[
+  {
+    "id": 1,
+    "name": "andrew",
+    "password": "15267252"
+  }
+]

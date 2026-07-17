@@ -1,0 +1,15 @@
+what is a type hint ?
+
+A type hint is a note in your code that says what type of value a variable, function parameter, or return value is expected to be.
+
+
+
+for example 
+
+def greet(name: str):
+    print(f"Hello {name}")
+
+
+this is the type hint 
+
+name: str

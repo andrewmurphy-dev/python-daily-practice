@@ -1,0 +1,76 @@
+what is python3 -m pytest -v 
+
+python3 
+--> this means run python 3 ! 
+
+
+-m 
+run a Python module as a command
+
+pytest 
+ the module/tool we want to run
+
+ -v 
+  verbose mode, show more detail
+
+
+
+
+  #confusion 
+
+  is this a pytest ???
+
+  def test_pytest_is_working():
+    assert 1 + 1 == 2
+
+
+    this is still a test , but doesnt store the result in memory ! 
+
+
+
+    #another confusion !
+
+    assert 1 + 1 == 2
+
+    is basically a shorter version of 
+
+    def test_pytest_is_working():
+    result = 1 + 1
+
+    assert result == 2
+
+
+
+ because Python can check the expression directly.
+
+
+python does nto need a variable name to calculate something ! 
+
+1 + 1
+
+this is an expression ! 
+
+python sees 
+
+1 + 1 == 2
+
+and evaluates each step 
+
+1 + 1          → 2
+2 == 2         → True
+assert True    → pass
+
+
+so 
+
+def test_pytest_is_working():
+    assert 1 + 1 == 2
+
+
+means:
+
+“Check that the expression 1 + 1 == 2 becomes True.”
+
+
+
+

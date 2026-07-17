@@ -1,0 +1,118 @@
+
+
+what is a virtual environment ?
+
+this is a private folder for one Python project where its installed packages are kept.
+
+
+my_project/
+    main.py
+    .venv/
+
+the .venv/ is the private environment !
+
+------------------------------------------------------------------
+what is a package?
+
+this is an addon tool for python or extra code
+
+when do you need a package?
+
+you need a package when normal python does not already give you the tool you need
+
+for example
+
+Use normal Python first.
+Use a package when the job is bigger, specialized, or annoying to build yourself.
+
+------------------------------------------------------------------
+
+why should each python project have its own environement ?
+
+each python project may need different packages.
+
+Project A needs requests
+Project B needs flask
+Project C needs pandas
+
+------------------------------------------------------------------
+
+
+what does pip do ?
+
+pip installs python packages.
+
+
+for example
+
+pip install requests
+
+
+Download the requests package
+Install it into the current Python environment
+Let your Python code use it
+
+
+then your code can do
+
+import requests
+
+
+------------------------------------------------------------------
+
+what is requirements.txt for ?
+
+this is a list of packages your project needs!
+
+
+you either create it manually
+
+or generate it from your current environment using pip
+
+
+------------------------------------------------------------------
+
+confusion
+
+
+when you install python ,  you do not get a virtual environment for each project
+Global Python
+Global pip
+Global package area
+
+
+Global Python = belongs to your computer
+Virtual environment = belongs to one project
+
+------------------------------------------------------------------
+
+
+
+very important!!! you must know this !
+
+
+#create virtual environemt
+#install x package
+#generate requirements
+
+
+to create a clean virtual environement !
+
+#step 1
+python3 -m venv .venv
+
+
+#step 2
+#activate it !
+source .venv/bin/activate
+
+
+#step 3
+#install package!
+
+pip install requests
+
+
+#step 4
+#generate requirements
+pip freeze > requirements.txt

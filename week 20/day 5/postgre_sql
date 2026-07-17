@@ -1,0 +1,55 @@
+so also today we are also doing the following !
+
+
+1. create a databse in dbbeaver 
+2. make a python_auth_cli databse
+3. make a table !
+4. get the database name , password and implmeent it to .env 
+
+
+then you need to test the connection 
+
+th-system on  env-test via  v3.14.0 ❯ python -c "from app.db import db_test_connection; print(db_test_connection())"
+1
+python-cli-auth-system on  env-test via  v3.14.0 took 3s ❯ 
+
+
+
+
+
+
+##notes 
+
+
+use template 01 
+
+
+
+so understanding timestamps in the postgresql database 
+
+uniz time is timezone dependent 
+
+
+so theres two 
+
+TIMESTAMP and TIMESTAMZ 
+
+
+
+pretty simple 
+
+TIMESTAMP 
+date + time, but no timezone information
+2026-07-10 23:15:00
+
+TIMESTAMPZ 
+timestamp with timezone awareness
+2026-07-10 23:15:00+09
+
+
+SO WE RECOMMEND USING TIMESTAMZ !
+
+
+in sql below:
+
+created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()

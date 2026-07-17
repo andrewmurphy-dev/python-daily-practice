@@ -1,0 +1,71 @@
+the package we need to install is 
+
+pip install fastapi uvicorn 
+
+- sqlalchemy 
+- psycopg[binary]
+- python-dotenv 
+
+
+so its pip install fastapi sqlalchemy (no space) psycoph[binary] python-dotenv
+
+sqlalchemy - database engine, session 
+pyscopg - postgresql server 
+python-dotenv - read .env file 
+
+import modules:
+
+#import os 
+this purpose is to only ask the system/environment , do u have "DATABASE_URL"
+
+
+#from dotenv import load_dotenv 
+
+this is used to load your .env file 
+
+load_dotenv() 
+
+
+
+
+#from sqlalchemy import create_engine, text 
+
+-- use to create engine
+
+engine = create_engine(DATABASE_URL)
+
+-- text , used for writing raw SQL,
+
+
+
+
+
+#from sqlalchemy.orm import sessionmaker 
+
+used to create database sessions 
+
+
+
+
+
+--IMPORTANT-
+this part 
+
+postgresql+psycopg 
+
+thios tells SQLalchemy 
+
+use the psycopg posgreSQL driver 
+
+
+in summery 
+
+import os
+
+from dotenv import load_dotenv
+from fastapi import FastAPI
+from sqlalchemy import create_engine, text
+from sqlalchemy.orm import sessionmaker
+
+
+

@@ -1,0 +1,50 @@
+what does "-m" mean?
+
+
+-m this means run a python module as a script
+
+what is a script ?
+
+this is just a file of instructions that a computer runs from top to bottom
+
+so how does this correlate to
+
+python3 -m venv .venv ?
+
+this means , find the built in module called venv and run it
+
+
+what is venv?
+this is virtual environment !
+
+Your project folder
+│
+├── main.py
+├── requirements.txt
+└── .venv/   ← private Python environment for this project
+
+
+
+
+what is source??
+
+
+
+this is a mac/linux terminal command !
+
+it means:
+
+Run the activate file so this terminal starts using the .venv environment.
+
+
+after you press enter :
+
+you should see:
+
+(.venv) user@computer project %
+
+what does which python do ??
+
+
+this shows which python program your terminal is using !
+

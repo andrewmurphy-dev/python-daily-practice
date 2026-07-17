@@ -1,0 +1,120 @@
+# Installing pytest with a virtual environment
+
+## 1. Create a virtual environment
+
+```bash
+python3 -m venv .venv
+```
+
+This creates a folder called `.venv`.
+
+Example:
+
+```text
+python-cli-auth-system/
+├── .venv/
+├── practice.py
+└── tests/
+```
+
+---
+
+## 2. Activate the virtual environment
+
+```bash
+source .venv/bin/activate
+```
+
+After this, your terminal is using the Python inside `.venv`.
+
+---
+
+## 3. Install pytest inside the virtual environment
+
+```bash
+python -m pip install pytest
+```
+
+Now `pytest` is installed inside your `.venv`.
+
+---
+
+## 4. Create/update requirements.txt
+
+```bash
+python -m pip freeze > requirements.txt
+```
+
+This automatically creates a `requirements.txt` file if it does not already exist.
+
+If it already exists, it overwrites it with the currently installed packages.
+
+You can also manually create an empty file with:
+
+```bash
+touch requirements.txt
+```
+
+---
+
+## Important confusion
+
+Creating a `.venv` does **not** automatically create `requirements.txt`.
+
+These are separate things:
+
+```bash
+python3 -m venv .venv
+```
+
+Creates the environment.
+
+```bash
+python -m pip freeze > requirements.txt
+```
+
+Creates the requirements file.
+
+---
+
+## When cloning a repo
+
+If you clone a repo, you normally create your own `.venv` again:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+Yes, you need to activate `.venv` when working in that project.
+
+---
+
+## .gitignore
+
+The `.venv` folder may have its own internal `.gitignore`, but you still need a project-level `.gitignore`.
+
+Example:
+
+```text
+python-cli-auth-system/
+├── .gitignore       ← create this one
+├── .venv/
+├── requirements.txt
+├── practice.py
+└── tests/
+```
+
+Put this inside the project `.gitignore`:
+
+```gitignore
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+```
+
+
+

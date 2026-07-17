@@ -1,0 +1,17 @@
+what is pip freeze?
+
+
+pip freeze shows the python packages installed in your python environment 
+
+#pip freeze > requirements.txt
+
+this means take all installed packages and save them into requirements.txt '
+
+
+pip install fastapi        = install package
+
+pip freeze                 = show installed packages
+
+pip freeze > requirements.txt = save installed packages
+
+pip install -r requirements.txt = reinstall packages from file

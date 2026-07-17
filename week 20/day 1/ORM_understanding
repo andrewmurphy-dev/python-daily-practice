@@ -1,0 +1,74 @@
+what is ORM?
+
+this is Object Relational Mapper 
+
+sounds fancy but means 
+
+“Use Python classes instead of writing SQL directly.”
+
+without ORM 
+
+result = db.execute(text("SELECT * FROM menu_items"))
+items = result.mappings().all()
+
+
+with ORM 
+items = db.query(MenuItem).all()
+
+
+
+#so cofnusion 
+
+what is happening here 
+
+result = db.execute(text("SELECT id, name, price_yen FROM menu_items"))
+
+
+| id | name  | price_yen |
+| -- | ----- | --------- |
+| 1  | Beer  | 600       |
+| 2  | Pizza | 1200      |
+
+
+
+#confusion 
+
+def db_test_connection():
+    with engine.connect() as connection:
+        result = connection.execute(text("SELECT 1"))
+        return result.scalar_one()
+
+
+
+so we can have two ways to talk to the database 
+
+1.
+test connection like above 
+
+2.
+def get_db():
+    db = SessionLocal()
+
+    try:
+        yield db
+
+    finally:
+        db.close()
+
+
+both of these sessions can execute sql 
+
+result = db.execute(text("SELECT * FROM menu_items"))
+
+
+
+the difference , use db inside your FastAPI routes !
+
+for example
+
+@app.get("/menu")
+def get_menu(db = Depends(get_db)):
+    result = db.execute(text("SELECT * FROM menu_items"))
+    return result.mappings().all()
+
+

@@ -1,0 +1,30 @@
+Week 14 — Day 1 Plan
+
+Goal:
+Understand the API request → response cycle and basic JSON parsing.
+
+Tasks:
+1. Create Week 14 project folder
+2. Create + activate virtual environment
+3. Install requests library
+4. Make first API call using PokéAPI
+5. Print response + status code
+6. Learn what 200 and 404 mean
+7. Convert JSON response into Python dictionary
+8. Extract values from API data
+9. Manually inspect JSON structure
+
+Core concepts:
+- requests.get(url)
+- response.status_code
+- response.text
+- response.json()
+- dictionary access
+
+Mental model:
+Python → sends HTTP request
+Server → sends response
+JSON → becomes Python dictionary
+
+End of Day 1 Goal:
+Be able to successfully call an API, understand the response, and extract useful data from JSON.

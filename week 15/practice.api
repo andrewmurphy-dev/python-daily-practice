@@ -1,0 +1,24 @@
+#so lets continue our practice of api. !
+
+for today we are just practicing the structure of fastapi !
+
+and we are gonna also try and run it in my local host!
+and we are going to learn how to use 
+
+uvicorn modulename:app --reload 
+
+this is what we will learn !
+
+what i realizeed you must familizerize yourself with the methods for te router decoators 
+do not confuse yourself 
+with
+
+
+@app.home 
+
+its correctioon is 
+
+@app.get("/")
+
+
+

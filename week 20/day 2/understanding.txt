@@ -1,0 +1,45 @@
+### so what is .env??
+
+
+this is a private settings file ! 
+
+it stores values your code needs 
+
+
+so you need to create the file itself 
+
+so inside it u need 
+
+
+DATABASE_URL = postgresql+psycopg://postgres:____________@localhost:__PORT__/__DATABASE__NAME 
+
+
+### what does it contain?
+
+
+so it contains environment variables , that your app needs at runetime 
+
+usually it contains things like:
+
+DATABASE_URL=postgresql+psycopg://postgres:postgres123@localhost:5432/bar_ticket_api
+SECRET_KEY=some-long-random-string
+API_KEY=abc123
+DEBUG=True
+ENVIRONMENT=development
+
+A .env file contains environment variables for the application, usually configuration values and secrets, such as database connection URLs, API keys, secret keys, ports, and environment mode.
+
+The .env file tells the app what database to connect to and what credentials/settings to use, without hard-coding those values directly in the Python code.
+
+
+
+### confusion !
+
+so virtual environment 
+
+this is different , this is a python installation for the project 
+
+
+.env file 
+
+this is a settings file that contains values like database_url and so on

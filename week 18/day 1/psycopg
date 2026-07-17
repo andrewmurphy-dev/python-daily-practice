@@ -1,0 +1,16 @@
+this is a database driver !
+most popular driver for connecting python to postgreSQL
+
+what it does ?
+
+it acts as a bridge 
+
+it lets your python talk to your postgresql database 
+
+sends commands , it sends your SQL queries from python to the database 
+
+it brings back data: it gets the results back and turns them into python format 
+
+Python cannot talk to PostgreSQL on its own. It needs this driver to understand how to connect and share information.
+
+pip install psycopg[binary] sqlalchemy python-dotenv

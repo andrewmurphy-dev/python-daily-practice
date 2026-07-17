@@ -1,0 +1,15 @@
+so essentially ur basically inputing test data into the pytest!
+
+so for example u make a function called test 
+inside that function u call the function that needs to be tested 
+then u test if it passes 
+
+
+this is the same for all things like for http requests ! 
+
+you must make a http request function to see if it works ! 
+
+
+When I send this request,
+I expect this response.
+If the response is wrong, fail.

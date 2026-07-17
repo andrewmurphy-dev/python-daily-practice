@@ -1,0 +1,28 @@
+this is the postgresql 
+
+create table users (
+id SERIAL primary key,
+name TEXT not null unique,
+password TEXT not null,
+created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+-- So here we are using timestamp and also the timezone 
+-- this is good for unix time conversion ! 
+
+
+
+select * from users;
+
+-- next we need to insert a test user ! 
+-- for sql use single quotes 
+
+insert into users (name, password)
+values ('Andrew', 'Barcelon123')
+
+-- so once postgresql takes over the app. 
+--there is no point creating a id ! in the app , this is only for seed data !
+
+-- we use this instead ! 
+
+

@@ -1,0 +1,14 @@
+In Python, the dot (.) is the attribute access operator (also known as dot notation). It is used to access the inner components of an object, such as its variables (attributes) or its functions (methods).
+
+
+
+
+THE POINTER (The Variable Name)            THE ACTUAL OBJECT (The Data)
+┌───────────┐                              ┌─────────────────────────┐
+│     x     │ ───────────────────────────> │  List Object: [1, 2, 3] │
+└───────────┘    (Points to memory address)└─────────────────────────┘
+
+
+
+
+

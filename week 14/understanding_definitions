@@ -1,0 +1,139 @@
+#so here we need to really know this !
+
+
+1. the URL
+
+this is broken up into different paths !
+
+this is where the request goes !
+this tells python
+
+send the request to this location !
+
+https://          = protocol
+pokeapi.co       = API server/domain
+/api/v2/pokemon/pikachu = endpoint/resource path
+
+
+
+2. method --> the action you want
+
+GET    = read/retrieve data
+POST   = create/send new data
+PUT    = replace/update data
+PATCH  = partially update data
+DELETE = delete data
+
+for example 1
+
+requests.get(url)
+I want to read data from this URL.
+
+
+
+for example 2
+
+requests.post(url, json=data)
+I want to send new data to this URL.
+
+
+
+
+3. HEADERS --> this is metadata !
+extra information about the request !
+
+Authorization = login/API token
+Content-Type = what format you are sending
+Accept = what format you want back
+
+
+
+
+
+4. ERROR AND VALIDATION ERRORS
+
+400 = bad input from client
+401 = not logged in / missing auth
+403 = logged in but not allowed
+404 = resource not found
+409 = conflict with current state
+422 = validation failed
+500 = server crashed / unexpected backend error
+
+
+
+
+
+5. what is seed data ?
+
+starter data you put into your app/database so the project has something to work with
+
+
+
+
+
+6. what are roots ?
+
+A route is a URL path your API listens for.
+When someone visits this path with this HTTP method,
+run this Python function.
+
+
+
+
+
+
+
+
+
+confusion
+
+
+what is this ?
+  http://localhost:8000/menu
+
+  what is this ?
+
+
+  you must create a server program first !
+
+  aand then this to see if it works !
+
+  localhost = my own computer
+8000 = the port my server is listening on
+
+
+its like a development server !
+Development:
+http://localhost:8000/menu
+
+Production:
+https://your-api-domain.com/menu
+
+
+
+
+what is ports ?
+
+localhost
+= this computer
+
+8000
+= the port where your FastAPI server program is running
+
+/menu
+= the API route inside your FastAPI app
+
+Your MacBook
+└── FastAPI server program running
+    └── listening on port 8000
+        └── has route /menu
+
+
+confusion
+what is the difference between port and endpoint ?
+
+Port = door into the running program
+Endpoint = specific route/function inside that program
+
+
