@@ -1,5 +1,0 @@
-so today we are gonna still continue to do pytest and understand it 
-
-so today we are going to be testing pytest in authification python project ! 
-
-
