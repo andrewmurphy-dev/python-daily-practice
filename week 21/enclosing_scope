@@ -1,0 +1,59 @@
+what is the enclosing scope ?
+
+this is the scope of an outer function that surrounds the inner function 
+
+#for example 
+
+
+def outer():
+    message = "Hello"  # enclosing variable for inner()
+
+    def inner():
+        print(message)
+
+    inner()
+
+outer()
+
+
+
+
+#message is local to outer(), but from inner()’s perspective, it is in the enclosing scope.
+
+#think of functions as Boxes !
+
+outer()
+┌─────────────────────────────┐
+│ message = "Hello"           │
+│                             │
+│ inner()                     │
+│ ┌─────────────────────────┐ │
+│ │ print(message)          │ │
+│ │ Looks outside this box  │ │
+│ └─────────────────────────┘ │
+└─────────────────────────────┘
+
+
+#confusion 
+
+def outer():
+    message = "Outer"
+
+    def inner():
+        message = "Inner"
+        print(message)
+
+    inner()
+
+outer()
+
+
+
+If inner() has its own message, its local variable wins:
+
+
+#the out put is:
+
+#Inner
+
+#Enclosing scope contains names from surrounding outer functions that are available to an inner function.
