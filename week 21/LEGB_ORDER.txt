@@ -1,0 +1,47 @@
+#when python encounters a name, it searches: local --> enclosing --> global --> Built-in
+
+
+
+
+
+#predit before running it 
+
+name = "Global"
+
+def outer():
+    name = "Enclosing"
+
+    def inner():
+        name = "Local"
+        print(name)
+
+    inner()
+
+outer()
+
+
+#output is local because python finds the name in the local scope of inner function first.
+
+#print(name) does not decide which name to print first ! 
+
+#python resolves using LEGB order. It first looks in the local scope, then in the enclosing scope, then in the global scope, and finally in the built-in scope.
+
+
+Global scope
+└── name ──► "Global"
+
+outer() local scope
+└── name ──► "Enclosing"
+
+inner() local scope
+└── name ──► "Local"
+
+
+
+Global box: name = "Global"
+└── outer box: name = "Enclosing"
+    └── inner box: name = "Local"
+        └── print(name) → "Local"
+
+
+        

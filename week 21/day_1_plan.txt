@@ -1,0 +1,32 @@
+You’re right—I dumped the whole lesson instead of giving you the plan.
+
+## Day 1 plan: Scope and LEGB
+
+**Goal:** Understand where Python looks for variables.
+
+### 30–60 minutes
+
+1. **Learn the concepts — 10 minutes**
+
+   * Local scope
+   * Enclosing scope
+   * Global scope
+   * Built-in scope
+   * LEGB order
+
+2. **Predict code — 10 minutes**
+   Look at 3 small examples and predict which variable Python uses before running them.
+
+3. **Write code — 15–25 minutes**
+
+   * One local-variable example
+   * One global-variable example
+   * One nested-function example showing enclosing scope
+
+4. **Mini challenge — 10 minutes**
+   Fix a function that incorrectly depends on a global variable by using parameters and `return`.
+
+5. **Finish — 5 minutes**
+   Explain in your own words:
+
+   > LEGB means Python searches Local, Enclosing, Global, then Built-in.
