@@ -1,0 +1,29 @@
+so what did we do in day 1 
+
+we learned about the local scope , global scope , LEGB 
+
+Global variable: this is a variable that is defined outside any function and can be accessed anywhere in the code 
+
+enclosing scope: this is the scope where its found outside the inner function unless the inner function has a local scope 
+
+Built-in scope this is part of the basic version of python 
+
+local scope: this is the area inside the function '
+
+
+def greet(name): #name is local 
+    message = f"Hello, {name}!"  # message is also in local 
+    print(message)  # Accessing the local variable
+
+
+greet("Alice")  # Calling the function with an argument
+
+
+
+name = "Alice"
+
+#the local name dissapears after the function is called , but
+
+
+
+#when python encounters a name, it searches: local --> enclosing --> global --> Built-in
