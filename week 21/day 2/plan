@@ -1,0 +1,15 @@
+what is the plan of day 2 
+
+
+
+| Part                        | What we’ll do                                       |
+| --------------------------- | --------------------------------------------------- |
+| **1. Quick recall**         | One short question from Day 1 about scope and LEGB  |
+| **2. Tutorial 1**           | Parameters vs arguments                             |
+| **3. Tutorial 2**           | Positional, keyword, and default arguments          |
+| **4. Prediction practice**  | Read function calls and predict the output          |
+| **5. Writing practice**     | Write several small functions using default values  |
+| **6. Combination practice** | Safely combine positional and keyword arguments     |
+| **7. Debugging practice**   | Fix invalid function definitions and function calls |
+| **8. Final challenge**      | Write one complete function from a blank file       |
+| **9. Review question**      | Explain today’s rules from memory                   |

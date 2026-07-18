@@ -1,0 +1,25 @@
+def greet(name):
+    print(f"Hello, {name}!")
+
+
+#name is a parameter 
+
+#what is a parameter?
+
+#Parameter = empty receiving box
+
+#what is an argument ?
+
+#an argument is the actual value that you pass into the function when you call it.
+
+
+
+def greet(name):
+          ↑
+      parameter
+      empty box
+
+
+greet("Andy")
+       ↑
+    argument

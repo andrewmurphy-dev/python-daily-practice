@@ -1,5 +1,12 @@
 what is the enclosing scope ?
 
+#the word encclosing means surrounding
+
+#what is scope in this context ?
+
+this is the region of code where python can find and use a particular name !  
+
+
 this is the scope of an outer function that surrounds the inner function 
 
 #for example 
