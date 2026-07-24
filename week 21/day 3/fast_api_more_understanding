@@ -1,0 +1,65 @@
+Client sends request
+        ↓
+FastAPI matches the route
+        ↓
+FastAPI extracts the inputs
+        ↓
+FastAPI parses and validates them
+        ↓
+        ├── VALID
+        │      ↓
+        │  Endpoint function runs
+        │      ↓
+        │  Your business logic runs
+        │      ↓
+        │  Response sent to client
+        │
+        └── INVALID
+               ↓
+           Endpoint function is skipped
+               ↓
+           FastAPI creates a validation error response
+               ↓
+           Error response sent to client/frontend
+
+
+
+
+FASTAPI VALIDATION
+Is the input shaped correctly?
+
+ticket_id: int
+"hello" → invalid
+"99"    → valid
+
+
+
+
+YOUR VALIDATION / BUSINESS LOGIC
+Is the valid request allowed or possible?
+
+Does ticket 99 exist?
+Is the ticket already paid?
+Is the menu item active?
+Is the requested price key allowed?
+
+
+
+for example
+
+
+
+GET /tickets/hello
+        ↓
+FastAPI rejects it
+Endpoint does not run
+
+
+
+
+
+GET /tickets/99
+        ↓
+FastAPI accepts 99 as an integer
+Endpoint runs
+Your code returns 404

@@ -1,0 +1,30 @@
+Plan
+
+Read the data shape
+
+FAKE_TICKETS is a list
+
+Each ticket is a dictionary
+
+items is another list inside each ticket
+
+Trace the existing endpoint
+What happens with ticket_id=2
+What happens with ticket_id=99
+Practise the lookup in plain Python
+Loop through FAKE_TICKETS
+Compare ticket["id"] with the requested ID
+Return or store the matching ticket
+Handle no match
+Complete 4–8 questions
+Start with direct ID searches
+Print specific ticket fields
+Handle missing tickets
+Fix broken lookup logic
+Rebuild the endpoint
+Write get_ticket_id() without copying
+Use HTTPException for a missing ticket
+Final explanation
+Explain every line in simple English
+
+Today we focus only on finding a ticket in the outer list. We will not work with the nested items yet.

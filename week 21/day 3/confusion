@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+
+
+
+
+@router.get("/{ticket_id}", status_code=http_status.HTTP_200_OK)
+def get_ticket_id(ticket_id: int):
+    for ticket in FAKE_TICKETS:
+        if ticket["id"] == ticket_id:
+            return ticket
+
+    raise HTTPException(
+        status_code=http_status.HTTP_404_NOT_FOUND,
+        detail="Ticket not found",
+    )
+
+
+
+#so i am confused here 
+
+
+#ticket_id:int
+
+
+
+#get_ticket_id  → function name
+
+#ticket_id      → parameter name
+
+#: int          → type annotation
+
+
+
+#The parameter ticket_id should receive an integer.
+
+
+
+
+#confusion 2 
+
+
+#Your endpoint uses a path parameter
+
+#A URL is text, so FastAPI initially receives the path segment like:
+
+#"2"
+
+#Because you wrote:
+
+#ticket_id: int
+
+#FastAPI checks whether "2" can become an integer and then passes this into the function:
+
+
+
+#GET /tickets/2
+#             ↑
+#        path parameter
+#        comes from URL
+
+
+
+
+
+#{
+#  "ticket_id": 2
+#}
+
+#        ↑
+#   request body
+#   comes from JSON
