@@ -1,0 +1,45 @@
+#Why return None usually goes after the loop
+
+
+
+#for example
+
+
+def find_ticket(tickets, ticket_id):
+    for ticket in tickets:
+        if ticket["id"] == ticket_id:
+            return ticket
+        else:
+            return None
+        
+
+
+
+
+#the problem is the return is inside the loop so it stops at the first iteration , so it needs to be outside the loop
+
+
+def find_ticket(tickets, ticket_id):
+    for ticket in tickets:
+        if ticket["id"] == ticket_id:
+            return ticket
+
+    return None
+
+
+
+
+
+
+#next debugging question 
+
+
+def find_ticket(tickets, ticket_id):
+    for ticket in tickets:
+        if ticket["id"] == ticket_id:
+            break
+
+    return ticket
+
+
+#doesnt return the ticket , just breaks it 
