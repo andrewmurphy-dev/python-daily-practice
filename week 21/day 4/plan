@@ -1,0 +1,5 @@
+recognise why a lookup incorrectly returns None
+recognise when break stops a loop too early
+place return None correctly
+distinguish break from return
+repair broken find_ticket() functions
