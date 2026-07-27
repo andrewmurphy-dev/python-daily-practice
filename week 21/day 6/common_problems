@@ -1,0 +1,35 @@
+
+#question 3 
+
+
+prices = menu_item_found["prices"]
+
+if price_key not in prices:
+    raise HTTPException(http.status.HTTP_400_BAD_REQUEST, detail="Invalid price key")
+
+else:
+     selected_price = prices[price_key]
+     print(selected_price)
+     print("price key is valid")
+
+
+#You do not need else. Once raise HTTPException(...) runs, the endpoint stops immediately.
+
+
+
+Invalid key
+→ raise HTTPException
+→ endpoint stops
+→ selected_price line is never reached
+
+Valid key
+→ if block is skipped
+→ selected_price is retrieved
+
+
+
+#sometimes you dont need to use a variable 
+
+#for example selected price 
+
+Initialise with None when you need to represent “not found yet” and check later. Do not initialise with None when an earlier raise or return removes every invalid path before the assignment.
