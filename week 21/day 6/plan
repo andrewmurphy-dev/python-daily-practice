@@ -1,0 +1,101 @@
+TODAY’S PLAN — PART 4: CONNECT PRICE VALIDATION TO THE ENDPOINT
+
+Goal:
+Take yesterday’s plain-Python price logic and add it to the FastAPI endpoint.
+
+Yesterday already completed:
+- Access menu_item_found["prices"]
+- Check if price_key exists
+- Handle valid and invalid keys
+- Store the official price in selected_price
+
+Today we will do:
+
+1. QUICK RECALL
+- One question accessing the nested prices dictionary
+- One question validating price_key and retrieving selected_price
+- If both are correct, move on immediately
+
+2. FIX THE CURRENT STATUS-CODE TYPO
+
+Change:
+
+http_status.HTTP_409_NOT_FOUND
+
+To:
+
+http_status.HTTP_409_CONFLICT
+
+3. ADD PRICE VALIDATION TO THE ENDPOINT
+
+Add this after the menu item has been found and confirmed to be in stock:
+
+prices = menu_item_found["prices"]
+
+if price_key not in prices:
+    raise HTTPException(
+        status_code=http_status.HTTP_400_BAD_REQUEST,
+        detail="Invalid price key",
+    )
+
+4. SELECT THE OFFICIAL BACKEND PRICE
+
+After the invalid key has been rejected:
+
+selected_price = prices[price_key]
+
+The frontend chooses the price option.
+The backend retrieves the actual trusted price.
+
+5. TEMPORARILY RETURN selected_price
+
+Update the temporary return:
+
+return {
+    "ticket": ticket_found,
+    "menu_item": menu_item_found,
+    "price_key": price_key,
+    "selected_price": selected_price,
+    "quantity": quantity,
+}
+
+6. TEST THREE CASES
+
+Test 1:
+Valid standard price key
+Expected:
+200 response and correct backend standard price
+
+Test 2:
+Valid 15ml price key
+Expected:
+200 response and correct backend 15ml price
+
+Test 3:
+Invalid price key
+Expected:
+400 Bad Request
+"Invalid price key"
+
+DEFINITION OF DONE
+
+I can write and explain:
+
+prices = menu_item_found["prices"]
+
+if price_key not in prices:
+    raise HTTPException(
+        status_code=http_status.HTTP_400_BAD_REQUEST,
+        detail="Invalid price key",
+    )
+
+selected_price = prices[price_key]
+
+NOT DOING TODAY
+
+- No new_ticket_item dictionary
+- No append()
+- No line_total
+- No ticket total update
+- No matching-item quantity update
+- No complete endpoint rebuild
