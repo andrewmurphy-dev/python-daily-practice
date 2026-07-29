@@ -27,6 +27,8 @@ def add_ticket_item(ticket_id: int, request: AddTicketItemRequest):
     menu_item_id = request.menu_item_id
     price_key = request.price_key
     quantity = request.quantity
+
+    
     menu_item_found = None
 
     for menu_item in menu_data["items"]:
