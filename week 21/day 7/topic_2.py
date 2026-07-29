@@ -33,13 +33,87 @@ prices = menu_item_found["prices"]
 
 
 if price_key not in prices:
-    raise HTTPException(status_code=http_status=HTTP_400_BAD_REQUEST, detail="Invalid price key")
+    raise HTTPException(status_code=http_status.HTTP_400_BAD_REQUEST, detail="Invalid price key")
 
 selected_price = prices[price_key]
 
-total_price = selected_price * quantity
+line_total = selected_price * quantity
 
 
 result = {
-    "name": 
+    "name": menu_item_found["name"],
+    "quantity": quantity,
+    "selected_price": selected_price,
+    "line_total": line_total,
+    "price_key": price_key 
 }
+
+print(result)
+
+
+
+
+
+
+
+#question 2 
+
+
+
+
+
+menu_item_found = {
+    "id": 58,
+    "name": "Gin & Tonic",
+    "inStock": True,
+    "prices": {
+        "standard": 800,
+        "double": 1400,
+    },
+}
+
+price_key = "double"
+quantity = 3
+prices = menu_item_found["prices"]
+
+
+if price_key not in prices:
+    raise HTTPException(status_code=http_status.HTTP_400_BAD_REQUEST, detail="Invalid price key")
+
+
+selected_price = prices[price_key]
+
+line_total = selected_price * quantity
+
+
+result = {
+    "name": menu_item_found["name"],
+    "price_key": price_key,
+    "selected_price": selected_price,
+    "quantity": quantity,
+    "line_total": line_total 
+}
+
+
+print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
