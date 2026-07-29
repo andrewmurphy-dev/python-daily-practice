@@ -1,0 +1,117 @@
+NEXT STUDY DAY — PART 5: BUILD ONE NEW TICKET ITEM
+
+Goal:
+Use the validated menu item, selected price and quantity to create one new ticket-item dictionary.
+
+1. QUICK RECALL — 2 QUESTIONS
+
+- Retrieve the nested prices dictionary
+- Validate price_key and create selected_price
+
+Do not spend the session re-learning this.
+Move forward if both answers are correct.
+
+2. LEARN THE NEW DATA STRUCTURE
+
+Create:
+
+new_ticket_item = {
+    "id": menu_item_found["id"],
+    "name": menu_item_found["name"],
+    "quantity": quantity,
+    "price": selected_price,
+}
+
+Understand where every value comes from.
+
+3. IMPORTANT DISTINCTION
+
+price:
+The official price for one unit.
+
+line_total:
+The official price multiplied by quantity.
+
+Example:
+
+selected_price = 1000
+quantity = 3
+line_total = 3000
+
+The ticket-item dictionary should keep:
+
+"price": 1000
+"quantity": 3
+
+Do not accidentally use:
+
+"price": 3000
+
+4. COMPLETE 5–8 PRACTICE QUESTIONS
+
+Practice creating new_ticket_item using:
+
+- standard price
+- 15ml price
+- double price
+- different quantities
+- different menu-item dictionaries
+- no hard-coded result values
+
+5. ADD line_total
+
+After creating new_ticket_item:
+
+line_total = selected_price * quantity
+
+Temporarily return or print:
+
+{
+    "new_ticket_item": new_ticket_item,
+    "line_total": line_total,
+}
+
+6. ENDPOINT-SHAPED FINAL QUESTION
+
+Starting with:
+
+menu_item_found
+price_key
+quantity
+prices
+selected_price
+
+Create:
+
+new_ticket_item
+line_total
+
+Then return both values.
+
+DEFINITION OF DONE
+
+I can independently write:
+
+new_ticket_item = {
+    "id": menu_item_found["id"],
+    "name": menu_item_found["name"],
+    "quantity": quantity,
+    "price": selected_price,
+}
+
+line_total = selected_price * quantity
+
+I can explain:
+
+- id and name come from trusted backend menu data
+- quantity comes from the validated request
+- price comes from the backend prices dictionary
+- line_total is price multiplied by quantity
+
+NOT DOING TODAY
+
+- No append()
+- No ticket_found["total"] update
+- No matching existing line-item logic
+- No full endpoint rebuild
+- No Postman tests
