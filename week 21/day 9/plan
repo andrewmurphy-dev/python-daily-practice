@@ -1,0 +1,14 @@
+Quick recall — 2 questions
+Validate price_key
+Create selected_price and new_ticket_item
+Append practice — 3 questions
+Add new_ticket_item to ticket_found["items"]
+Print the updated ticket
+Use different menu items and quantities
+Calculate line_total — 2 questions
+selected_price * quantity
+Keep unit price separate from line total
+New concept — update the ticket total
+Only after the earlier questions are correct
+Learn:
+ticket_found["total"] += line_total

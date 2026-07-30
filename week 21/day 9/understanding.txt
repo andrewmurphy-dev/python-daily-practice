@@ -1,0 +1,4 @@
+ticket_found["name"]                 # "Mike"
+ticket_found["items"][0]["name"]     # "Cover Charge"
+ticket_found["items"][1]["name"]     # "Asahi Beer"
+
