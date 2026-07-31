@@ -1,0 +1,21 @@
+You do not need another tracking variable.
+
+price_key is meant to change depending on what the frontend sends.
+
+The key point is:
+
+price_key = "standard"
+
+does not match "double".
+
+It only selects "standard".
+
+In our practice questions, we manually wrote:
+
+price_key = "standard"
+
+because we were pretending the customer selected standard.
+
+In the real FastAPI endpoint, the value comes from the frontend:
+
+price_key = request.price_key

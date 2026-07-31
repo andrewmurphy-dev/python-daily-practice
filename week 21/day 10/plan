@@ -1,0 +1,88 @@
+TODAY’S PLAN — UPDATE THE TICKET TOTAL
+
+Goal:
+Correctly add the new line total to the ticket’s existing total.
+
+1. QUICK RECALL — 1 QUESTION
+
+Complete the familiar flow:
+
+- Get prices
+- Validate price_key
+- Create selected_price
+- Calculate line_total
+- Create new_ticket_item
+- Append it to ticket_found["items"]
+
+2. LEARN THE NEW LINE
+
+ticket_found["total"] += line_total
+
+Understand that this means:
+
+ticket_found["total"] = ticket_found["total"] + line_total
+
+Example:
+
+existing ticket total = 500
+new line total = 2200
+updated ticket total = 2700
+
+3. COMPLETE 4–6 PRACTICE QUESTIONS
+
+Practise with:
+
+- A ticket starting at total 0
+- A ticket starting with an existing Cover Charge
+- Different prices and quantities
+- More than one existing ticket item
+- Printing the final updated ticket
+
+4. DEBUG BROKEN TOTAL LOGIC
+
+Fix mistakes such as:
+
+ticket_found["total"] = line_total
+
+This wrongly replaces the old total.
+
+Correct:
+
+ticket_found["total"] += line_total
+
+5. FINAL STANDALONE QUESTION
+
+Write the complete plain-Python flow:
+
+Find official price
+→ calculate line_total
+→ create new_ticket_item
+→ append to ticket_found["items"]
+→ update ticket_found["total"]
+→ print the updated ticket
+
+DEFINITION OF DONE
+
+I can independently write:
+
+selected_price = prices[price_key]
+line_total = selected_price * quantity
+
+ticket_found["items"].append(new_ticket_item)
+ticket_found["total"] += line_total
+
+I can explain:
+
+- price is the cost of one unit
+- line_total is price × quantity
+- ticket total includes the previous total plus the new line total
+- the old total must not be overwritten
+
+NOT DOING TODAY
+
+- No existing-item quantity merging
+- No database work
+- No receipt upload
+- No Stripe
+- No full FastAPI endpoint rebuild
+- No Postman testing yet
