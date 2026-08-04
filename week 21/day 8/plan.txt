@@ -1,0 +1,6 @@
+real frontend request
+→ request.price_key
+→ backend selects official price
+→ calculates totals
+→ updates ticket
+→ returns the updated ticket
