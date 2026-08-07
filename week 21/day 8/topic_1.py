@@ -131,3 +131,22 @@ line_total = 4000
 
 
 
+prices = menu_item_found["prices"]
+
+if price_key not in prices:
+    raise  HTTPException(http.status.HTTP_400_BAD_REQUEST, detail="Invalid price key")
+
+
+selected_price = prices[price_key]
+
+total_price = selected_price * quantity 
+
+new_ticket_item = {
+    "id": menu_item_found["id"],
+    "name": menu_item_found["name"],
+    "price_key": price_key,
+    "quantity": quantity,
+    "price": selected_price
+}
+
+ticket_found["items"].append(new_ticket_item)
