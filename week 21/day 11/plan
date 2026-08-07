@@ -1,0 +1,6 @@
+2 quick recall questions — official price → line_total → append → ticket total.
+Learn the new logic — search ticket_found["items"] for an existing matching line.
+Learn why we compare both id and price_key.
+4–6 coding questions on finding and updating existing quantities.
+Final challenge: append if new, update quantity if it already exists.
+We will not integrate the full endpoint yet. First make this logic clear in plain Python.
