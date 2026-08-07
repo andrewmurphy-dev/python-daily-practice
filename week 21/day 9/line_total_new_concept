@@ -1,3 +1,21 @@
-so here we are going to learn a new concept 
+ticket_found["items"].append(new_ticket_item)
 
-so each ticket al
+this is the formula 
+
+
+ticket_found["items"].append(new_ticket_item)
+
+ticket_found["total"] += line_total
+
+print(ticket_found)
+
+
+#remmeber this 
+
+selected_price = prices[price_key]
+
+price_key = "standard"
+
+line_total = selected_price * quantity 
+
+#so we go through id 1 , see the price key and line total and we see the next id and do the same again
