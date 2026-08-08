@@ -1,0 +1,34 @@
+Plan
+
+1. Quick recap — 2 questions
+
+Find an existing matching item
+Update its quantity
+
+2. New topic — decide between two paths
+
+matching item found
+→ update quantity
+
+no matching item found
+→ create new_ticket_item
+→ append it
+
+3. Practice — 4–6 questions
+
+Same item + same price_key
+Same item + different price_key
+Completely new item
+Update quantity correctly
+Append correctly
+Combine this with line_total and ticket total
+
+4. Final challenge
+Write the full plain-Python flow:
+
+find existing item
+→ if found: update quantity
+→ else: append new item
+→ update ticket total
+
+No database, Stripe, or receipt upload today.
