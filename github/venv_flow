@@ -193,3 +193,5 @@ python -c "from app.db import db_test_connection; print(db_test_connection())"
 th-system on  env-test via  v3.14.0 ❯ python -c "from app.db import db_test_connection; print(db_test_connection())"
 1
 python-cli-auth-system on  env-test via  v3.14.0 took 3s ❯ 
+
+
