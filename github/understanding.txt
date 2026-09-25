@@ -1,0 +1,28 @@
+requirements.txt is usually the file that lists the Python packages your project needs.
+
+
+pip install -r requirements.txt
+
+if someone wants to install your packaes into their project 
+
+pip freeze lists all Python packages installed in your currently active environment.
+
+
+> requirements.txt saves that list into a file called requirements.txt.
+
+So if the file does not exist, it creates it. If it already exists, it overwrites it.
+
+
+cat just prints the contents of a file in the terminal.
+
+cat 
+
+Think of cat as a quick way to read a text file without opening VS Code
+
+.env.example is basically a template showing which environment variables the project needs.
+
+That tells another developer:
+
+“BarTicket needs a variable called DATABASE_URL, and here is the expected format.”
+
+

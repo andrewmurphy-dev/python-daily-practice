@@ -3,5 +3,3 @@ git log --oneline main..HEAD
 
 
 git show 2c64be3
-
-
