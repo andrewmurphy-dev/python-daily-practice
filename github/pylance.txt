@@ -1,0 +1,32 @@
+what is pylance !
+
+this is a microsoft python language ! 
+
+it helps with code completeion !
+type checking 
+error highlighting 
+and navigating python code 
+
+
+its built on pyright  !
+
+
+
+No special syntax is required to use Pylance—just write normal Python. It can give you suggestions and catch some mistakes as you type.
+
+
+type hints are optional , but they help pylance understand your code !
+
+
+for example
+
+
+def greet(name: str) -> str:
+    return f"Hello, {name}"
+
+Here, name: str says name should be text, and -> str says the function returns text. You can learn those gradually; you don’t need them to start coding.
+
+
+You use Pylance to make writing Python in VS Code easier. It can suggest code as you type, point out likely mistakes before you run your program, and help you find where functions and variables are used.
+
+Type hints can make those suggestions and checks more accurate, but you can use Pylance without adding type hints
