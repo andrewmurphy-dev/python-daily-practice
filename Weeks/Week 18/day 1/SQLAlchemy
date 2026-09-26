@@ -1,0 +1,150 @@
+SQLAlchemy, this allows to manage the connection cleanly between the fastapi and the postgresql database 
+
+pip install psycopg[binary] sqlalchemy python-dotenv
+
+
+
+
+it creates an engine 
+
+for example
+
+engine = create_engine(DATABASE_URL)
+
+
+what is the engine ?
+
+this is the main database connetion manager 
+
+Remember how to connect to PostgreSQL
+Manage database connections
+Give sessions a way to talk to the database
+
+
+engine = create_engine(DATABASE_URL)
+
+
+DATABASE_URL = the address of the database
+
+engine = the connection machine built from that address
+
+
+what do u mean by connection machine ?
+
+
+
+the engine is the object in your API code , that manages the connection betweeen FastAPI app and PostgreSQL database 
+
+
+
+engine = create_engine(DATABASE_URL)
+
+means:
+
+“Create the thing my API will use to reach PostgreSQL.”
+
+
+
+
+
+
+session = one actual conversation with the database
+
+
+
+what are sessions ?
+
+SessionLocal = sessionmaker(bind=engine)
+
+this is One working conversation with the database.
+
+
+1. FastAPI receives request
+2. FastAPI opens a database session
+3. API sends SQL through the session
+4. PostgreSQL runs the SQL
+5. PostgreSQL returns rows
+6. API converts rows to JSON
+7. Session closes
+
+
+confusion 
+
+DATABASE_URL = the address of the database
+
+engine = knows the road to the database
+
+SessionLocal = factory that creates database sessions using that road
+
+session/db = one live conversation with the database
+
+SQL = the actual commands/language sent during the conversation
+
+psycopg = the driver/library that knows how to speak PostgreSQL
+engine  = SQLAlchemy’s manager that uses psycopg to connect
+session = one active conversation with the database
+SQL     = the language/commands
+
+
+FastAPI code
+    ↓
+SQLAlchemy engine
+    ↓
+psycopg driver
+    ↓
+PostgreSQL server
+    ↓
+your database
+
+So when you write:
+
+engine = create_engine(DATABASE_URL)
+
+and the URL is:
+
+postgresql+psycopg://postgres:password@localhost:5432/bar_ticket
+
+This part matters:
+
+postgresql+psycopg
+
+It tells SQLAlchemy:
+
+“Use PostgreSQL, and use the psycopg driver to talk to it.”
+
+DATABASE_URL = address + login details
+
+psycopg = driver that knows PostgreSQL protocol
+
+engine = manager built using the URL and psycopg
+
+session = one active database conversation created from the engine
+
+what do u mean by manager ?
+
+1. Reads the DATABASE_URL
+2. Knows which driver to use: psycopg
+3. Knows where PostgreSQL is: localhost:5432
+4. Knows which database to use: bar_ticket
+5. Opens database connections when needed
+6. Reuses connections instead of making a brand-new one every time
+7. Gives sessions a way to send SQL
+
+
+
+
+
+
+5465
+the engine is a connection logic ! , not business logic ! 
+
+Business logic:
+"Can this ticket be paid?"
+"Is this ticket still open?"
+"Should we block editing after payment?"
+
+Connection logic:
+"How do I reach PostgreSQL?"
+"Which driver do I use?"
+"How do I open/reuse connections?"
+"How does a session send SQL?"

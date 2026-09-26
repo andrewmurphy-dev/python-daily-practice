@@ -1,0 +1,39 @@
+step 1:
+
+get your database name , get your password 
+
+you can reset the password inside 
+
+ALTER USER postgres WITH PASSWORD "postgres123";
+
+
+
+step 2:
+
+create your .env file 
+
+inside !
+
+
+
+DATABASE_URL=postgresql+psycopg://postgres:postgres123@localhost:5432/YOUR_DATABASE_NAME
+
+
+
+
+step 3 
+(assuming .venv was created already!)
+
+activate your environment!
+
+source .venv/bin/activate 
+
+
+
+
+step 4
+
+Install packages 
+
+pip install fastapi uvicorn sqlalchemy "psycopg[binary]" python-dotenv
+

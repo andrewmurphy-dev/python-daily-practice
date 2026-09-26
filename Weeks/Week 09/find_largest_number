@@ -1,0 +1,131 @@
+#finding the largest number !
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+largest = numbers[0]
+for i in numbers:
+    if i > largest:
+        largest = i
+print(largest)
+
+
+
+#question 1 
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+largest = numbers[0]
+for i in numbers:
+    if i > largest:
+        largest = i
+print(largest)
+
+
+#question 2 
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+smallest = numbers[0]
+
+for i in numbers:
+    if i <= smallest:
+        smallest = i
+print(smallest)
+
+
+#only issue is <= 
+
+#what is the difference bwtween both <= and <?
+
+With <=:
+
+if i <= smallest:     # 1 <= 1 → True
+    smallest = i      # smallest = 1 (reassigning to the same value!)
+Python does this reassignment 5 times. Pointless.
+
+With <:
+
+if i < smallest:      # 1 < 1 → False
+    smallest = i      # skipped
+#Python never reassigns. Clean.
+
+
+#question 3
+#find the largest even number in the list
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+largest_even = numbers[0]
+for i in numbers:
+    if i % 2 == 0:
+        largest_even = i
+print(largest_even)
+
+
+#qyestion 4
+#find the longest word in the list
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+
+for i in words:
+    if len(i) > len(longest_word[0]):
+        longest_word = i
+
+print(longest_word)
+
+#this is wrong !
+
+#why ?
+
+#longest)_word is never created before the loop! 
+
+
+
+#solution 
+longest_word = words[0]                         
+for i in words:
+    if len(i) > len(longest_word):
+        longest_word = i
+print(longest_word)
+
+#question 5
+#find the shortest word in the list
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+longest_word = words[0]
+for i in words:
+    if len(i) > len(longest_word):
+        longest_word = i
+
+print(longest_word)
+
+#question 5 
+#find the shortest word in the list
+
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+
+shortest_word = words[0]
+
+for word in words:
+    if len(word) < len(shortest_word):
+        shortest_word = word
+
+print(shortest_word)
+
+#question 6 
+
+scores = {"Alice": 87, "Bob": 92, "Charlie": 78, "Dana": 95, "Eve": 88}
+
+#find the highest score
+#this is a dictionary !
+largest_score = 0 
+for score in scores.values():
+    if score > largest_score:
+        largest_score = score
+print(largest_score)
+
+
+#this is correct ! 
+
+
+#but the tracking vairable can be better !
+#we can actually put the values into a list ! 
+
+#list() is a built in function ! 
+largest_score = list(scores.values())[0]
+

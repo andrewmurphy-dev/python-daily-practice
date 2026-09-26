@@ -1,0 +1,17 @@
+physically test the postgresql today in a app , in python authitification ! 
+
+today we are gonna try learn how to connect to the database
+
+DBeaver confirms PostgreSQL works
+↓
+.env stores the database address
+↓
+db.py creates the engine
+↓
+FastAPI imports the test function
+↓
+/db-test runs SELECT 1
+↓
+PostgreSQL replies
+
+

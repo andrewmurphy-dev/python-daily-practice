@@ -1,0 +1,31 @@
+what is a driver ?
+
+this is a helper program that lets two different things talk t each other !
+
+the waiter is the driver , 
+
+
+two main drivers 
+
+hardware drivers 
+
+these let your computer talk to physical parts 
+
+
+
+software drivers 
+
+these let two drifferent programs talk ! 
+
+so a database driver , this is a software library your api uses to talk to a specfic databse 
+
+its like the middle man ! 
+
+so your api talks to the driver ! 
+
+Your Python API
+   ↓
+database driver, like psycopg
+   ↓
+PostgreSQL database
+
