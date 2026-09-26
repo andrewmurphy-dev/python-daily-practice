@@ -1,0 +1,44 @@
+#what is ORM ?
+
+
+this is object relational mapper ! 
+
+you know that PostgreSQL has rows like this ! 
+
+
+tickets
+
+id | name      | status
+-------------------------
+1  | Ticket:1  | open
+2  | Ticket:2  | paid
+
+
+
+without ORM , python might deal with that using SQL
+
+SELECT * FROM tickets WHERE id = 1;
+
+with ORM like SQLAlchemy 
+
+Python can represent that row as an object 
+
+
+ticket = Ticket(
+    id=1,
+    name="Ticket:1",
+    status="open"
+)
+
+
+
+DATABASE                  PYTHON
+
+tickets table             Ticket class
+one row             ↔     one Ticket object
+id column            ↔     ticket.id
+name column          ↔     ticket.name
+status column        ↔     ticket.status
+
+
+

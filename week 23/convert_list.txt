@@ -1,0 +1,14 @@
+how do we convert a object to a list ! 
+
+
+
+so we use __dict__ 
+
+this is a very good builtin super power !
+
+
+
+# The elegant, one-line Python way
+tickets_list = [t.__dict__ for t in (ticket, ticket1, ticket2)]
+
+
