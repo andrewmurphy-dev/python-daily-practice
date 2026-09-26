@@ -1,0 +1,185 @@
+#coding example
+
+
+
+class Ticket:
+    def __init__(self, id, name, status):
+        self.id = id
+        self.name = name
+        self.status = status
+
+
+
+
+
+
+ticket = Ticket(
+    id=4,
+    name="Ticket:4",
+    status="open"
+)
+
+
+
+print(ticket.id)
+print(ticket.name)
+print(ticket.status)
+
+
+
+
+
+#question 1 
+
+
+
+
+
+class Ticket:
+    def __init__(self, id, name, status, total):
+        self.id = id
+        self.name = name
+        self.status = status 
+        self.total = total
+
+
+
+
+
+
+
+
+ticket = Ticket(
+    id=1,
+    name="Ticket:1",
+    status="open",
+    total=1109
+)
+
+
+
+ticket1 = Ticket(
+    id=2,
+    name="Ticket:2",
+    status="open",
+    total=1101
+)
+
+
+
+ticket2 = Ticket(
+    id=3,
+    name="Ticket:3",
+    status="open",
+    total=1103
+)
+
+
+ticket_list = [ticket, ticket1, ticket2]
+
+
+
+for ticket_id in ticket_list:
+    if ticket_id.id == 2:
+        ticket_id.status = "paid"
+
+print(ticket_id.name, ticket_id.status, ticket_id.total)
+
+    
+
+
+
+
+
+
+
+
+
+#harder question 
+
+
+class Payment:
+    def __init__(self, id, ticket_id, method, amount):
+        self.id = id
+        self.ticket_id = ticket_id
+        self.method = method
+        self.amount = amount 
+
+
+
+
+payment_1 = Payment(
+    id=4,
+    ticket_id=4,
+    method=4,
+    amount=3000
+)
+
+
+payment_2 = Payment(
+    id=2,
+    ticket_id=4,
+    method=4,
+    amount=3000
+)
+
+
+
+payment_3 = Payment(
+    id=1,
+    ticket_id=4,
+    method=4,
+    amount=3000
+)
+
+
+
+payment_4 = Payment(
+    id=3,
+    ticket_id=4,
+    method=4,
+    amount=3000
+)
+
+
+
+payment_5 = Payment(
+    id=5,
+    ticket_id=4,
+    method=4,
+    amount=3000
+)
+
+
+
+
+payment_list = [payment_1, payment_2, payment_3, payment_4, payment_5]
+
+total_amount = 0
+
+for payment in payment_list:
+    payment.total = 0
+    if payment.id == 2:
+        total_amount += payment.total
+    
+
+
+print(total_amount)
+
+
+    
+
+def fully_payed(total_amount):
+    if total_amount >= 2000:
+        print("fully payed")
+
+    else:
+        print("remaining balance")
+        print(total_amount)
+        
+
+
+
+
+
+#continue to solve this day 2!
