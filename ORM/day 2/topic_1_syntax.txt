@@ -1,0 +1,72 @@
+what is a base in ORM !??
+
+
+
+
+what is a declarative base ?
+
+this allows you to define your database tables using python classes 
+
+
+understanding (this is hard) 
+
+We create a shared Base class that inherits from SQLAlchemy’s DeclarativeBase. 
+That gives Base the ORM machinery, including metadata that tracks our mapped models. 
+Then when we create a class like Ticket(Base), SQLAlchemy treats it as an ORM model. 
+We still have to define the table name and mapped columns, but Base is what connects that class into SQLAlchemy’s ORM system.
+
+even shorter 
+
+We make a normal Python class inherit from Base. 
+That connects the class to SQLAlchemy’s ORM system, and SQLAlchemy stores the table/column structure for that model inside the shared metadata.
+
+
+what is a class!??
+
+this is a blurprint for creating objects 
+
+
+
+what is schema?? 
+this is data structure 
+
+
+
+what is meta data ?
+
+data about to structure your data 
+
+
+for example you configure metadata by writing ORM models 
+
+
+
+class Ticket(Base):
+    __tablename__ = "tickets"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    status: Mapped[str] = mapped_column(String(32), nullable=False)
+
+
+
+SQLAlchemy reads that class, it builds metadata roughly describing:
+
+
+
+table: tickets
+
+columns:
+- id → Integer → primary key
+- status → String(32) → NOT NULL
+
+
+
+
+what does primary key mean?? 
+
+A primary key is the column that uniquely identifies each row in a table
+
+
+id: Mapped[int] = mapped_column(primary_key=True)
+
+this python attribute maps to the tables unique ID column 

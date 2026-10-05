@@ -1,0 +1,19 @@
+WEEK 2 — DAY 2: SQLALCHEMY ORM MODELS
+
+Topic 1 — ORM Recap
+- Class ↔ table
+- Object ↔ row
+- Attribute ↔ column
+- What SQLAlchemy does between Python and PostgreSQL
+
+Topic 2 — BarTicket Models
+- Read Ticket
+- Read TicketItem
+- Read Payment
+- Understand what each model represents
+
+Topic 3 — Hard Coding Practice
+- Build ORM models yourself
+- Read ORM code
+- Fix broken ORM code
+- 4–6 difficult questions
