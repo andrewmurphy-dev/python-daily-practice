@@ -1,0 +1,35 @@
+def pay_order(order_id):
+    order_found = None
+
+    # Find the order
+    for order in orders:
+        if order["id"] == order_id:
+            order_found = order
+            break
+
+    # Validate that the order exists
+    if order_found is None:
+        return "Order not found"
+
+    # Validate the current state
+    if order_found["status"] != "open":
+        return "Order cannot be paid"
+
+    # Validate that the order contains items
+    if not order_found["items"]:
+        return "Order has no items"
+
+    # Validate the total
+    if order_found["total"] <= 0:
+        return "Invalid total"
+
+    # Validate every item
+    for item in order_found["items"]:
+        if item["quantity"] <= 0:
+            return "Invalid item quantity"
+
+    # Change the order state
+    order_found["status"] = "paid"
+    order_found["paid_at"] = current_unix_time()
+
+    return order_found
