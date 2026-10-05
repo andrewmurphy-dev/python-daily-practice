@@ -1,0 +1,19 @@
+#remmeebr 
+
+
+#in barticket-API 
+
+
+ticket Class --> tickets table 
+
+
+ticket object ---> one ticket row 
+
+
+ticket.status --> status column
+
+
+
+ticket.total --> total column 
+
+
