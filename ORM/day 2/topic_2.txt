@@ -1,0 +1,35 @@
+#so mapping 
+
+#this is the connection between your python model (python class) attributes and database tables/columns 
+
+
+
+#what is mapped[..] ??
+
+#this is an ORM-mapped python attribute whose value is an int !
+
+
+for example 
+
+
+id = ORM-mapped attribute 
+
+
+int = python value is expected to be an integer 
+
+
+then 
+
+mapped_column() 
+
+this is a function provided by SQLAlchemy 
+
+mapped_column() is SQLAlchemy code that helps define how that Python attribute maps to a database column.
+
+
+Mapped[int]
+= Python-side mapped attribute type
+
+mapped_column(...)
+= database-column configuration
+
