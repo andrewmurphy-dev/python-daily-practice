@@ -1,0 +1,8 @@
+what is fork in github!??
+
+
+this is your own copy of someone eles repo under your github account 
+
+fork creates your own copy on github 
+
+clone copies the repo onto your computer to work on 

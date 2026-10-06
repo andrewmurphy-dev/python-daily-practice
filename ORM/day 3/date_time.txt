@@ -1,0 +1,15 @@
+from datetime import datetime 
+
+
+so what does this mean 
+
+
+paid_at: Mapped[datetime | None]
+
+this means 
+
+paid_at can be either datetime or None 
+
+
+cause paid_at = None 
+

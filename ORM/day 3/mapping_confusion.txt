@@ -1,0 +1,96 @@
+i am still very confused with mapping 
+
+
+so how does SQLAlchemy ORM mapping work ????
+
+so you have python code 
+
+
+for example 
+
+
+status: Mapped[str] = mapped_column(String(32))
+
+
+
+ORM maps your python model (class) and attributees to database tables and columns 
+
+you write python classes , ORM connects them to your database 
+
+
+
+
+Mapped[str]. ---> this is a python attrubute , and its value is a string 
+
+
+
+Python model (class) --->> database tables 
+attributes ==> columns 
+objects ---> rows 
+
+
+
+you are not mapping python to the ORM 
+
+the reverse 
+
+
+
+The ORM maps your python model(class)/ ¥attribute to database table / column 
+
+
+
+
+
+
+
+how do u actually fill in the rows with values ??
+
+
+
+
+class Ticket(Base):
+    __tablename__ = "tickets"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    status: Mapped[str] = mapped_column()
+    total: Mapped[int] = mapped_column()
+
+
+
+so this defines the structure 
+
+
+
+so here 
+
+
+ticket = Ticket(
+    status="open",
+    total=1500
+)
+
+
+then you do 
+
+
+db.add(ticket)
+db.commit()
+
+
+
+
+
+
+and if you want to see it visually 
+
+
+so SQLalchemy is a package 
+and you can use a function to see it visually 
+called inspect !
+
+
+from sqlalchemy import inspect
+
+for column in inspect(Ticket).columns:
+    print(column.key, column.type)
