@@ -1,0 +1,18 @@
+WEEK 2 — DAY 3: ORM COLUMNS
+
+Topic 1 — Mapped Columns
+- What mapped_column() does
+- id, status, total, paid_at
+- Python attribute ↔ database column
+
+Topic 2 — Types + Nullable
+- Mapped[int], Mapped[str], Mapped[datetime]
+- Integer, String, DateTime
+- nullable=True vs nullable=False
+- Why paid_at can be None
+
+Topic 3 — Hard Coding Practice
+- Build ORM columns yourself
+- Read real BarTicket column definitions
+- Fix broken column definitions
+- 4–6 difficult questions

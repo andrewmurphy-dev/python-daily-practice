@@ -1,0 +1,65 @@
+look at this 
+
+
+total: Mapped[int] = mapped_column(
+    Integer,
+    nullable=False,
+    default=0
+)
+
+
+
+
+
+Mapped[int]
+→ Python side
+→ total is an int in Python
+
+Integer
+→ database side
+→ the PostgreSQL column is an integer type
+
+
+
+
+so 
+
+Python                Database
+
+int        ↔          Integer
+str        ↔          String
+datetime   ↔          DateTime
+
+
+
+
+
+what is string(32) 
+
+db column stores a sting with max length of 32 
+
+each row of that column 
+
+
+
+what is autoincrement=True 
+
+
+the db auto generates the next ID when you insert a New rOW 
+
+
+
+
+what is index=True 
+
+create a db index for this column so lookups and filtering can be easier 
+
+
+so this word means differently in lists indexes and db indexes 
+
+
+this means create a special lookup structure to help the database find rows faster 
+
+“Build an index for the entire status column.”
+
+PostgreSQL then automatically indexes whatever values exist in that column
