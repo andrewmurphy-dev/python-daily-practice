@@ -1,0 +1,23 @@
+WEEK 2 — DAY 4: SQLALCHEMY RELATIONSHIPS
+
+Topic 1 — Foreign Keys
+- What a foreign key is
+- Primary key vs foreign key
+- Why ticket_id exists
+- How one row points to another row
+
+Topic 2 — relationship()
+- What SQLAlchemy relationship() does
+- Ticket.items
+- Ticket.payments
+- Why relationship() is different from mapped_column()
+
+Topic 3 — Hard Coding Practice
+- Build related models yourself
+- Connect Ticket and TicketItem
+- Connect Ticket and Payment
+- Read broken relationship code
+- 4–6 difficult questions
+
+
+
