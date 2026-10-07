@@ -1,0 +1,47 @@
+Payment.ticket_id
+= stores the Ticket's ID in the database
+
+Payment.ticket
+= gives you the actual Ticket object in Python
+
+Ticket.payments
+= gives you the Payment objects in Python
+
+
+
+
+for example 
+
+
+class Ticket(Base):
+    __tablename__ = "tickets"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+    payments: Mapped[list["Payment"]] = relationship(
+        back_populates="ticket"
+    )
+
+
+focus on 
+
+
+ payments: Mapped[list["Payment"]] = relationship(
+        back_populates="ticket"
+    )
+
+
+Ticket.payments focuses on payment objects in python !
+
+thats why we have 
+
+back_population="ticket"
+
+
+
+why???
+
+
+
+
+

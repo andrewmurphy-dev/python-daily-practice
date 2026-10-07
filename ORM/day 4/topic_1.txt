@@ -1,0 +1,76 @@
+#foreogn keys 
+
+#first you need definitions 
+
+
+#what is a key?
+an ID that identifies a row
+
+
+#foreign , this is a key that comes from a different table
+
+#what is a parent table ??
+this is the table being referenced
+
+for example in BarTicket-API
+we are referring to id value in the tickets table 
+
+
+#what is child value ?
+this is the table containing the foreign key 
+
+
+
+
+
+
+for example 
+
+
+tickets
+
+id
+--
+5
+
+
+
+payments
+
+id | ticket_id
+---------------
+20 | 5
+
+
+
+Payment 20 belongs to Ticket 5.
+
+
+why ?
+
+payment.ticket_id = 5 matches ticket.id = 5
+
+
+
+
+
+for example 
+
+
+class Ticket(Base):
+    __tablename__ = "tickets"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+
+
+
+class Payment(Base):
+    __tablename__ = "payments"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+    ticket_id: Mapped[int] = mapped_column(
+        ForeignKey("tickets.id")
+    )
+
